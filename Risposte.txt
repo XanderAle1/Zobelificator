@@ -1,0 +1,3 @@
+<img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">
+
+<img src="cross.png" width="65" height="65"> <audio preload="auto" autoplay src="Wrong.mp3">

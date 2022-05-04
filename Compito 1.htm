@@ -1,0 +1,2219 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" prefix="dc: http://purl.org/dc/elements/1.1/">
+<head><meta name="author" content="Created with Hot Potatoes by Half-Baked Software, registered to XanderAle."/><meta name="keywords" content="Hot Potatoes, Hot Potatoes, Half-Baked Software, Windows, University of Victoria"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+<meta name="dc:creator" content="XanderAle" />
+<meta name="dc:title" content="&#x003C;a href=&quot;index.html&quot;&#x003E;&#x003C;img src=&quot;logo.png&quot; width=&quot;500&quot; height=&quot;169.783&quot;&#x003E;&#x003C;/a&#x003E;" />
+
+
+
+<title>
+
+</title>
+
+<!-- Made with executable version 7.0 Release 3 Build 0 -->
+
+<!-- The following insertion allows you to add your own code directly to this head tag from the configuration screen -->
+
+
+
+<style>
+
+
+/* This is the CSS stylesheet used in the exercise. */
+/* Elements in square brackets are replaced by data based on configuration settings when the exercise is built. */
+
+/* BeginCorePageCSS */
+
+/* Made with executable version 7.0 Release 3 Build 0 */
+
+
+
+/* CSS variables for colours. */
+:root{
+	--strFontFace:       Geneva,Arial,sans-serif;
+	--strFontSize:       medium;
+	--strTextColor:      #000000;
+	--strTitleColor:     #ffffff;
+
+	--strFuncLightColor: #ffffff;
+	--strFuncShadeColor: #7f7f7f;
+	--strLinkColor:      #0000FF;
+	--strVLinkColor:     #0080c0;
+	
+	--strNavBarColor:    #00000;
+	--strNavLightColor:  #7f7f7f;
+	--strNavShadeColor:  #000000;
+	--strNavTextColor:   #ffffff;
+	
+	--strPageBGColor:    #C0C0C0;
+	--strExBGColor:      #FFFFFF;
+}
+
+body{
+	font-family: var(--strFontFace);
+	background-color: var(--strPageBGColor);
+	color: var(--strTextColor);
+	background-image: url(Sdondo2.jpg); 
+	margin-right: 5%;
+	margin-left: 5%;
+	font-size: var(--strFontSize);
+	padding-bottom: 0.5em;
+}
+
+p{
+	text-align: left;
+	margin: 0px;
+	font-size: 1em;
+}
+
+table,div,span,td{
+	font-size: 1em;
+	color: var(--strTextColor);
+}
+
+div.Titles{
+	padding: 0.5em;;
+	text-align: center;
+	color: var(--strTitleColor);
+}
+
+button{
+	font-family: var(--strFontFace);
+	font-size: 1em;
+	display: inline;
+}
+
+.ExerciseTitle{
+	font-size: 140%;
+	color: var(--strTitleColor);
+}
+
+.ExerciseSubtitle{
+	font-size: 120%;
+	color: var(--strTitleColor);
+}
+
+div.StdDiv, div.ExerciseContainer, div.ReadingContainer{
+	background-color: var(--strExBGColor);
+	text-align: center;
+	font-size: 1em;
+	color: var(--strTextColor);
+	padding: 0.5em;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	border-color: var(--strTextColor);
+	margin-bottom: 1px;
+}
+
+div.ReadingContainer, div.ExerciseContainer{
+	min-width: 15em;
+	flex-grow: 1;
+	flex-basis: 0;
+	margin: 1px;
+}
+
+div#ContainerDiv{
+	margin: -1px;
+	padding: 0;
+	border: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+/* EndCorePageCSS */
+
+.RTLText{
+	text-align: right;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", var(--strFontFace); 
+}
+
+.CentredRTLText{
+	text-align: center;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", var(--strFontFace); 
+}
+
+button p.RTLText{
+	text-align: center;
+}
+
+.RTLGapBox{
+	text-align: right;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Times New Roman", var(--strFontFace);
+}
+
+.Guess{
+	font-weight: bold;
+}
+
+.CorrectAnswer{
+	font-weight: bold;
+}
+
+div#Timer{
+	padding: 0.25em;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	color: var(--strTitleColor);
+}
+
+span#TimerText{
+	padding: 0.25em;
+	border-width: 1px;
+	border-style: solid;
+	font-weight: bold;
+	display: none;
+	color: var(--strTitleColor);
+}
+
+span.Instructions{
+
+}
+
+div.ExerciseText{
+
+}
+
+.FeedbackText, .FeedbackText span.CorrectAnswer, .FeedbackText span.Guess, .FeedbackText span.Answer{
+	color: var(--strTitleColor);
+}
+
+.LeftItem{
+	font-size: 1em;
+	color: var(--strTextColor);
+	text-align: left;
+}
+
+.RightItem{
+	font-weight: bold;
+	font-size: 1em;
+	color: var(--strTextColor);
+	text-align: left;
+}
+
+span.CorrectMark{
+
+}
+
+input, textarea{
+	font-family: var(--strFontFace);
+	font-size: 120%;
+}
+
+select{
+	font-size: 1em;
+}
+
+div.Feedback {
+	background-color: var(--strPageBGColor);
+	left: 33%;
+	width: 34%;
+	top: 33%;
+	z-index: 1;
+	border-style: solid;
+	border-width: 1px;
+	padding: 5px;
+	text-align: center;
+	color: var(--strTitleColor);
+	position: absolute;
+	display: none;
+	font-size: 1em;
+}
+
+
+
+
+div.ExerciseDiv{
+	color: var(--strTextColor);
+}
+
+/* JMatch standard output table. */
+table.MatchTable{
+	margin: 2em auto; 
+	border-width: 0;
+}
+
+/* JMatch flashcard styles */
+table.FlashcardTable{
+	background-color: transparent;
+	color: var(--strTextColor);
+	border-color: var(--strTextColor);
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	/*width: 90%;*/
+	position: relative;
+	text-align: center;
+	padding: 0px;
+}
+
+table.FlashcardTable tr{
+	border-style: none;
+	margin: 0px;
+	padding: 0px;
+	background-color: var(--strExBGColor);
+}
+
+table.FlashcardTable td.Showing{
+	font-size: 140%;
+	text-align: center;
+	width: 50%;
+	display: table-cell;
+	padding: 2em;
+	margin: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0.5em;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strNavShadeColor);
+	background-color: var(--strPageBGColor);
+}
+
+table.FlashcardTable td.Hidden{
+	display: none;
+}
+
+/* JMix styles */
+div.JMixDrag, div.JMatchDrag{
+	padding: 0;
+	background-color: var(--strPageBGColor);
+	border-style: none;
+}
+
+div#GuessDiv{
+	padding: 0.5em;
+	margin-bottom: 2em;
+}
+
+div#SegmentDiv{
+	margin-top: 2em;
+	margin-bottom: 2em;
+	text-align: center;
+}
+
+a.ExSegment{
+	font-size: 120%;
+	font-weight: bold;
+	text-decoration: none;
+	color: var(--strTextColor);
+	display: inline-block;
+	padding: 0.5em;
+	border: solid 1pt gray;
+	margin-bottom: 0.5em;
+}
+
+span.RemainingWordList{
+	font-style: italic;
+}
+
+div.DropLine {
+	position: absolute;
+	text-align: left;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: var(--strTitleColor);
+	width: 80%;
+	left: 10%;
+}
+
+/* JCloze styles */
+
+.ClozeWordList{
+	text-align: center;
+	font-weight: bold;
+}
+
+div.ClozeBody{
+	text-align: left;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	line-height: 2.0
+}
+
+span.GapSpan{
+	font-weight: bold;
+}
+
+/* JCross styles */
+
+table.CrosswordGrid{
+	margin: auto auto 1em auto;
+	border-collapse: collapse;
+	padding: 0px;
+	background-color: #000000;
+}
+
+table.CrosswordGrid tbody tr td{
+	width: 1.5em;
+	height: 1.5em;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 140%;
+	padding: 1px;
+	margin: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000000;
+	color: #000000;
+}
+
+table.CrosswordGrid span{
+	color: #000000;
+}
+
+table.CrosswordGrid td.BlankCell{
+	background-color: #000000;
+	color: #000000;
+}
+
+table.CrosswordGrid td.LetterOnlyCell{
+	text-align: center;
+	vertical-align: middle;
+	background-color: #ffffff;
+	color: #000000;
+	font-weight: bold;
+}
+
+table.CrosswordGrid td.NumLetterCell{
+	text-align: left;
+	vertical-align: top;
+	background-color: #ffffff;
+	color: #000000;
+	padding: 1px;
+	font-weight: bold;
+}
+
+.NumLetterCellText{
+	cursor: pointer;
+	color: #000000;
+}
+
+.GridNum{
+	vertical-align: super;
+	font-size: 66%;
+	font-weight: bold;
+	text-decoration: none;
+	color: #000000;
+}
+
+.GridNum:hover, .GridNum:visited{
+	color: #000000;
+}
+
+table#Clues{
+	margin: auto;
+	vertical-align: top;
+}
+
+table#Clues td{
+	vertical-align: top;
+}
+
+table.ClueList{
+  margin: auto;
+}
+
+td.ClueNum{
+	text-align: right;
+	font-weight: bold;
+	vertical-align: top;
+}
+
+td.Clue{
+	text-align: left;
+}
+
+div#ClueEntry{
+	text-align: left;
+	margin-bottom: 1em;
+}
+
+/* Keypad styles */
+
+div.Keypad{
+	text-align: center;
+	display: none; /* initially hidden, shown if needed */
+	margin-bottom: 0.5em;
+}
+
+div.Keypad button{
+	font-family: var(--strFontFace);
+	font-size: 120%;
+	background-color: #ffffff;
+	color: #000000;
+	width: 2em;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0.5em;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strTextColor);
+}
+
+/* JQuiz styles */
+
+div.QuestionNavigation{
+	text-align: center;
+}
+
+.QNum{
+	margin: 0em 1em 0.5em 1em;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+textarea{
+	font-family: var(--strFontFace);
+}
+
+.QuestionText{
+	text-align: left;
+	margin: 0px;
+	font-size: 1em;
+}
+
+.Answer{
+	font-size: 120%;
+}
+
+.PartialAnswer{
+	font-size: 120%;
+	letter-spacing: 0.1em;
+	color: var(--strTitleColor);
+}
+
+.Highlight{
+	color: #000000;
+	background-color: #ffff00;
+	font-weight: bold;
+	font-size: 120%;
+}
+
+ol.QuizQuestions{
+	text-align: left;
+	list-style-type: none;
+}
+
+li.QuizQuestion{
+	padding: 1em;
+	border-style: solid;
+	border-width: 0px 0px 1px 0px;
+}
+
+ol.MCAnswers{
+	text-align: left;
+	list-style-type: upper-alpha;
+	padding: 1em;
+}
+
+ol.MCAnswers li{
+	margin-bottom: 1em;
+}
+
+ol.MSelAnswers{
+	text-align: left;
+	list-style-type: lower-alpha;
+	padding: 1em;
+}
+
+div.ShortAnswer{
+	padding: 1em;
+}
+
+.FuncButton {
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 3em;
+
+	border-left-color: var(--strFuncLightColor);
+	border-top-color: var(--strFuncLightColor);
+	border-right-color: var(--strFuncShadeColor);
+	border-bottom-color: var(--strFuncShadeColor);
+	color: var(--strTextColor);
+	background-color: var(--strExBGColor);
+
+	border-width: 1pt;
+	cursor: pointer;	
+	box-shadow: 0.2em 0.3em 0.2em var(--strFuncShadeColor);
+}
+
+.FuncButton:active {
+	box-shadow: none;
+}
+
+.FuncButton:hover{
+	color: var(--strExBGColor);
+	background-color: var(--strTextColor);
+}
+
+/*BeginNavBarStyle*/
+
+div.NavButtonBar{
+	background-color: var(--strNavBarColor);
+	text-align: center;
+	margin: 0.25rem 0;
+	clear: both;
+	font-size: 1em;
+	padding: 0.2em;
+	box-sizing: border-box;
+}
+
+.NavButton {
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 3em;
+	
+	border-left-color: var(--strNavLightColor);
+	border-top-color: var(--strNavLightColor);
+	border-right-color: var(--strNavShadeColor);
+	border-bottom-color: var(--strNavShadeColor); 
+	background-color: var(--strNavBarColor);
+	color: var(--strNavTextColor);
+
+	border-width: 1pt;
+	cursor: pointer;	
+	box-shadow: 0.2em 0.3em 0.2em var(--strNavShadeColor);
+}
+
+.NavButton:active {
+	box-shadow: none;
+}
+
+.NavButton:hover{
+	color: var(--strNavBarColor);
+	background-color: var(--strNavTextColor);
+}
+
+/*EndNavBarStyle*/
+
+a{
+	color: var(--strLinkColor);
+}
+
+a:visited{
+	color: var(--strVLinkColor);
+}
+
+a:hover{
+	color: var(--strLinkColor);
+}
+
+div.CardStyle {
+	position: absolute;
+	font-family: var(--strFontFace);
+	font-size: 1em;
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 2em;
+	border-width: 1pt;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strTextColor);
+	background-color: var(--strExBGColor);
+	left: -50px;
+	top: -50px;
+	overflow: visible;
+	touch-action: none;
+	user-select: none;
+	box-sizing: border-box;
+}
+
+div.CardStyleCentered{
+	text-align: center;
+}
+
+.rtl{
+	text-align: right;
+	font-size: 140%;
+}
+
+
+</style>
+
+<script>
+
+//<![CDATA[
+
+<!--
+
+
+
+
+//CODE FOR HANDLING NAV BUTTONS AND FUNCTION BUTTONS
+
+function FocusAButton(){
+	if (document.getElementById('CheckButton1') != null){
+		document.getElementById('CheckButton1').focus();
+	}
+	else{
+		if (document.getElementById('CheckButton2') != null){
+			document.getElementById('CheckButton2').focus();
+		}
+		else{
+			document.getElementsByTagName('button')[0].focus();
+		}
+	}
+}
+
+
+
+
+//CODE FOR HANDLING DISPLAY OF POPUP FEEDBACK BOX
+
+var topZ = 1000;
+
+function ShowMessage(Feedback){
+	var Output = Feedback + '<br /><br />';
+	document.getElementById('FeedbackContent').innerHTML = Output;
+	var FDiv = document.getElementById('FeedbackDiv');
+	topZ++;
+	FDiv.style.zIndex = topZ;
+	FDiv.style.top = TopSettingWithScrollOffset(30) + 'px';
+
+	FDiv.style.display = 'block';
+
+	ShowElements(false, 'input');
+	ShowElements(false, 'select');
+	ShowElements(false, 'object');
+	ShowElements(true, 'object', 'FeedbackContent');
+
+//Focus the OK button
+	setTimeout("document.getElementById('FeedbackOKButton').focus()", 50);
+	
+//
+//	RefreshImages();
+//
+}
+
+function ShowElements(Show, TagName, ContainerToReverse){
+// added third argument to allow objects in the feedback box to appear
+//IE bug -- hide all the form elements that will show through the popup
+//FF on Mac bug : doesn't redisplay objects whose visibility is set to visible
+//unless the object's display property is changed
+
+	//get container object (by Id passed in, or use document otherwise)
+	TopNode = document.getElementById(ContainerToReverse);
+	var Els;
+	if (TopNode != null) {
+		Els = TopNode.getElementsByTagName(TagName);
+	} else {
+		Els = document.getElementsByTagName(TagName);
+	}
+
+	for (var i=0; i<Els.length; i++){
+		if (TagName == "object") {
+			//manipulate object elements in all browsers
+			if (Show == true){
+				Els[i].style.visibility = 'visible';
+			}
+			else{
+				Els[i].style.visibility = 'hidden';
+			}
+		} 
+	}
+}
+
+
+
+function HideFeedback(){
+	document.getElementById('FeedbackDiv').style.display = 'none';
+	ShowElements(true, 'input');
+	ShowElements(true, 'select');
+	ShowElements(true, 'object');
+}
+
+
+//GENERAL UTILITY FUNCTIONS AND VARIABLES
+
+//PAGE DIMENSION FUNCTIONS
+function PageDim(){
+//Get the page width and height
+	this.W = 600;
+	this.H = 400;
+	this.W = document.getElementsByTagName('body')[0].offsetWidth;
+	this.H = document.getElementsByTagName('body')[0].offsetHeight;
+}
+
+var pg = null;
+
+function GetPageXY(El) {
+	var XY = {x: 0, y: 0};
+	while(El){
+		XY.x += El.offsetLeft;
+		XY.y += El.offsetTop;
+		El = El.offsetParent;
+	}
+	return XY;
+}
+
+function GetScrollTop(){
+	if (typeof(window.pageYOffset) == 'number'){
+		return window.pageYOffset;
+	}
+	else{
+		if ((document.body)&&(document.body.scrollTop)){
+			return document.body.scrollTop;
+		}
+		else{
+			if ((document.documentElement)&&(document.documentElement.scrollTop)){
+				return document.documentElement.scrollTop;
+			}
+			else{
+				return 0;
+			}
+		}
+	}
+}
+
+function GetViewportHeight(){
+	if (typeof window.innerHeight != 'undefined'){
+		return window.innerHeight;
+	}
+	else{
+		if (((typeof document.documentElement != 'undefined')&&(typeof document.documentElement.clientHeight !=
+     'undefined'))&&(document.documentElement.clientHeight != 0)){
+			return document.documentElement.clientHeight;
+		}
+		else{
+			return document.getElementsByTagName('body')[0].clientHeight;
+		}
+	}
+}
+
+function TopSettingWithScrollOffset(TopPercent){
+	var T = Math.floor(GetViewportHeight() * (TopPercent/100));
+	return GetScrollTop() + T; 
+}
+
+//CODE FOR AVOIDING LOSS OF DATA WHEN BACKSPACE KEY INVOKES history.back()
+var InTextBox = false;
+
+function SuppressBackspace(e){ 
+	if (InTextBox == true){return;}
+	thisKey = e.keyCode;
+
+	var Suppress = false;
+
+	if (thisKey == 8) {
+		Suppress = true;
+		e.preventDefault();
+	}
+}
+
+window.addEventListener('keypress',SuppressBackspace,false);
+
+function ReduceItems(InArray, ReduceToSize){
+	var ItemToDump=0;
+	var j=0;
+	while (InArray.length > ReduceToSize){
+		ItemToDump = Math.floor(InArray.length*Math.random());
+		InArray.splice(ItemToDump, 1);
+	}
+}
+
+function Shuffle(InArray){
+	var Num;
+	var Temp = new Array();
+	var Len = InArray.length;
+
+	var j = Len;
+
+	for (var i=0; i<Len; i++){
+		Temp[i] = InArray[i];
+	}
+
+	for (i=0; i<Len; i++){
+		Num = Math.floor(j  *  Math.random());
+		InArray[i] = Temp[Num];
+
+		for (var k=Num; k < (j-1); k++) {
+			Temp[k] = Temp[k+1];
+		}
+		j--;
+	}
+	return InArray;
+}
+
+function WriteToInstructions(Feedback) {
+	document.getElementById('InstructionsDiv').innerHTML = Feedback;
+
+	RefreshImages();
+
+}
+
+
+
+Imgs = new Array();
+
+function PreloadImages(){
+	var a = PreloadImages.arguments;
+	for (var i=0; i<a.length; i++){
+		Imgs[i] = new Image();
+		Imgs[i].src = a[i];
+	}
+}
+
+function RefreshImages(){
+	for (var i=0; i<document.images.length; i++){
+		if (document.images[i].name.substring(0,6) != 'NavBar'){
+			document.images[i].src = document.images[i].src;
+		}
+	}
+}
+
+
+function EscapeDoubleQuotes(InString){
+	return InString.replace(/"/g, '&quot;')
+}
+
+function TrimString(InString){
+        var x = 0;
+
+        if (InString.length != 0) {
+                while ((InString.charAt(InString.length - 1) == '\u0020') || (InString.charAt(InString.length - 1) == '\u000A') || (InString.charAt(InString.length - 1) == '\u000D')){
+                        InString = InString.substring(0, InString.length - 1)
+                }
+
+                while ((InString.charAt(0) == '\u0020') || (InString.charAt(0) == '\u000A') || (InString.charAt(0) == '\u000D')){
+                        InString = InString.substring(1, InString.length)
+                }
+
+                while (InString.indexOf('  ') != -1) {
+                        x = InString.indexOf('  ')
+                        InString = InString.substring(0, x) + InString.substring(x+1, InString.length)
+                 }
+
+                return InString;
+        }
+
+        else {
+                return '';
+        }
+}
+
+function FindLongest(InArray){
+	if (InArray.length < 1){return -1;}
+
+	var Longest = 0;
+	for (var i=1; i<InArray.length; i++){
+		if (InArray[i].length > InArray[Longest].length){
+			Longest = i;
+		}
+	}
+	return Longest;
+}
+
+//SELECTION OBJECT FOR TYPING WITH KEYPAD
+var selObj = null;
+            
+SelObj = function(box){
+	this.box = box;
+	this.selStart = this.box.selectionStart;
+	this.selEnd = this.box.selectionEnd;
+	this.selText = this.box.value.substring(this.selStart, this.selEnd);
+	return this;
+}
+
+function setSelText(newText){
+	var caretPos = this.selStart + newText.length;
+	var newValue = this.box.value.substring(0, this.selStart);
+	newValue += newText;
+	newValue += this.box.value.substring(this.selEnd, this.box.value.length);
+	this.box.value = newValue;
+	this.box.setSelectionRange(caretPos, caretPos);
+	this.box.focus();
+}
+SelObj.prototype.setSelText = setSelText;
+
+function setSelSelectionRange(start, end){
+	this.box.setSelectionRange(start, end);
+}
+SelObj.prototype.setSelSelectionRange = setSelSelectionRange;
+
+//UNICODE CHARACTER FUNCTIONS
+function IsCombiningDiacritic(CharNum){
+	var Result = (((CharNum >= 0x0300)&&(CharNum <= 0x370))||((CharNum >= 0x20d0)&&(CharNum <= 0x20ff)));
+	Result = Result || (((CharNum >= 0x3099)&&(CharNum <= 0x309a))||((CharNum >= 0xfe20)&&(CharNum <= 0xfe23)));
+	return Result;
+}
+
+function IsCJK(CharNum){
+	return ((CharNum >= 0x3000)&&(CharNum < 0xd800));
+}
+
+//SETUP FUNCTIONS
+//BROWSER WILL REFILL TEXT BOXES FROM CACHE IF NOT PREVENTED
+function ClearTextBoxes(){
+	var NList = document.getElementsByTagName('input');
+	for (var i=0; i<NList.length; i++){
+		if ((NList[i].id.indexOf('Guess') > -1)||(NList[i].id.indexOf('Gap') > -1)){
+			NList[i].value = '';
+		}
+		if (NList[i].id.indexOf('Chk') > -1){
+			NList[i].checked = '';
+		}
+	}
+}
+
+
+
+
+
+
+
+//JQUIZ CORE JAVASCRIPT CODE
+
+var CurrQNum = 0;
+var CorrectIndicator = '<span style="color:green;">&#x2714;</span>';
+var IncorrectIndicator = '<span style="color:red;">&#x2718;</span>';
+var YourScoreIs = '<b>Il tuo punteggio &#x00E8;:</b>';
+
+//New for 6.2.2.0
+var CompletedSoFar = 'Domande a cui hai risposto fin\'ora: ';
+var ExerciseCompleted = '<b>Hai completato il test!</b>';
+var ShowCompletedSoFar = true;
+
+var ContinuousScoring = false;
+var CorrectFirstTime = 'Risposte corretta al primo colpo:';
+var ShowCorrectFirstTime = true;
+var ShuffleQs = true;
+var ShuffleAs = true;
+var DefaultRight = 'Corretto!';
+var DefaultWrong = 'Sbagliato!';
+var QsToShow = 60;
+var Score = 0;
+var Finished = false;
+var Qs = null;
+var QArray = new Array();
+var ShowingAllQuestions = false;
+var ShowAllQuestionsCaption = 'Visualizzazione domande in serie';
+var ShowOneByOneCaption = 'Visualizzazione singola domanda';
+var State = new Array();
+var Feedback = '';
+var TimeOver = false;
+var strInstructions = '';
+var Locked = false;
+
+//The following variable can be used to add a message explaining that
+//the question is finished, so no further marking will take place.
+var strQuestionFinished = '';
+
+function CompleteEmptyFeedback(){
+	var QNum, ANum;
+	for (QNum=0; QNum<I.length; QNum++){
+//Only do this if not multi-select
+		if (I[QNum][2] != '3'){
+  		for (ANum = 0; ANum<I[QNum][3].length; ANum++){
+  			if (I[QNum][3][ANum][1].length < 1){
+  				if (I[QNum][3][ANum][2] > 0){
+  					I[QNum][3][ANum][1] = DefaultRight;
+  				}
+  				else{
+  					I[QNum][3][ANum][1] = DefaultWrong;
+  				}
+  			}
+  		}
+		}
+	}
+}
+
+function SetUpQuestions(){
+	var AList = new Array(); 
+	var QList = new Array();
+	var i, j;
+	Qs = document.getElementById('Questions');
+	while (Qs.getElementsByTagName('li').length > 0){
+		QList.push(Qs.removeChild(Qs.getElementsByTagName('li')[0]));
+	}
+	var DumpItem = 0;
+	if (QsToShow > QList.length){
+		QsToShow = QList.length;
+	}
+	while (QsToShow < QList.length){
+		DumpItem = Math.floor(QList.length*Math.random());
+		for (j=DumpItem; j<(QList.length-1); j++){
+			QList[j] = QList[j+1];
+		}
+		QList.length = QList.length-1;
+	}
+	if (ShuffleQs == true){
+		QList = Shuffle(QList);
+	}
+	if (ShuffleAs == true){
+		var As;
+		for (var i=0; i<QList.length; i++){
+			As = QList[i].getElementsByTagName('ol')[0];
+			if (As != null){
+  			AList.length = 0;
+				while (As.getElementsByTagName('li').length > 0){
+					AList.push(As.removeChild(As.getElementsByTagName('li')[0]));
+				}
+				AList = Shuffle(AList);
+				for (j=0; j<AList.length; j++){
+					As.appendChild(AList[j]);
+				}
+			}
+		}
+	}
+	
+	for (i=0; i<QList.length; i++){
+		Qs.appendChild(QList[i]);
+		QArray[QArray.length] = QList[i];
+	}
+
+//Show the first item
+	QArray[0].style.display = '';
+	
+//Now hide all except the first item
+	for (i=1; i<QArray.length; i++){
+		QArray[i].style.display = 'none';
+	}		
+	SetQNumReadout();
+	
+	SetFocusToTextbox();
+}
+
+function SetFocusToTextbox(){
+//if there's a textbox, set the focus in it
+	if (QArray[CurrQNum].getElementsByTagName('input')[0] != null){
+		QArray[CurrQNum].getElementsByTagName('input')[0].focus();
+//and show a keypad if there is one
+		if (document.getElementById('CharacterKeypad') != null){
+			document.getElementById('CharacterKeypad').style.display = 'block';
+		}
+	}
+	else{
+  	if (QArray[CurrQNum].getElementsByTagName('textarea')[0] != null){
+  		QArray[CurrQNum].getElementsByTagName('textarea')[0].focus();	
+//and show a keypad if there is one
+			if (document.getElementById('CharacterKeypad') != null){
+				document.getElementById('CharacterKeypad').style.display = 'block';
+			}
+		}
+//This added for 6.0.4.11: hide accented character buttons if no textbox
+		else{
+			if (document.getElementById('CharacterKeypad') != null){
+				document.getElementById('CharacterKeypad').style.display = 'none';
+			}
+		}
+	}
+}
+
+function ChangeQ(ChangeBy){
+//The following line prevents moving to another question until the current
+//question is answered correctly. Uncomment it to enable this behaviour. 
+//	if (State[CurrQNum][0] == -1){return;}
+	if (((CurrQNum + ChangeBy) < 0)||((CurrQNum + ChangeBy) >= QArray.length)){return;}
+	QArray[CurrQNum].style.display = 'none';
+	CurrQNum += ChangeBy;
+	QArray[CurrQNum].style.display = '';
+//Undocumented function added 10/12/2004
+	ShowSpecialReadingForQuestion();
+	SetQNumReadout();
+	SetFocusToTextbox();
+}
+
+var HiddenReadingShown = false;
+function ShowSpecialReadingForQuestion(){
+//Undocumented function for showing specific reading text elements which change with each question
+//Added on 10/12/2004
+	if (document.getElementById('ReadingDiv') != null){
+		if (HiddenReadingShown == true){
+			document.getElementById('ReadingDiv').innerHTML = '';
+		}
+		if (QArray[CurrQNum] != null){
+//Fix for 6.0.4.25
+			var Children = QArray[CurrQNum].getElementsByTagName('div');
+			for (var i=0; i<Children.length; i++){
+			if (Children[i].className=="HiddenReading"){
+					document.getElementById('ReadingDiv').innerHTML = Children[i].innerHTML;
+					HiddenReadingShown = true;
+//Hide the ShowAllQuestions button to avoid confusion
+					if (document.getElementById('ShowMethodButton') != null){
+						document.getElementById('ShowMethodButton').style.display = 'none';
+					}
+				}
+			}	
+		}
+	}
+}
+
+function SetQNumReadout(){
+	document.getElementById('QNumReadout').innerHTML = (CurrQNum+1) + ' / ' + QArray.length;
+	if ((CurrQNum+1) >= QArray.length){
+		if (document.getElementById('NextQButton') != null){
+			document.getElementById('NextQButton').style.visibility = 'hidden';
+		}
+	}
+	else{
+		if (document.getElementById('NextQButton') != null){
+			document.getElementById('NextQButton').style.visibility = 'visible';
+		}
+	}
+	if (CurrQNum <= 0){
+		if (document.getElementById('PrevQButton') != null){
+			document.getElementById('PrevQButton').style.visibility = 'hidden';
+		}
+	}
+	else{
+		if (document.getElementById('PrevQButton') != null){
+			document.getElementById('PrevQButton').style.visibility = 'visible';
+		}
+	}
+}
+
+var I=new Array();
+I[0]=new Array();I[0][0]=100;
+I[0][1]='';
+I[0][2]='0';
+I[0][3]=new Array();
+I[0][3][0]=new Array('A. Controllare la regolare evoluzione di una gravidanza','<img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',0,0,1);
+I[0][3][1]=new Array('B. Individuare eventuali anomalie dello sviluppo fetale','<img src="cross.png" width="65" height="65"> <audio preload="auto" autoplay src="Wrong.mp3">',0,0,1);
+I[0][3][2]=new Array('C. Eseguire non pi\u00F9 di tre controlli ecografici: entro il 3\u00B0 mese, ecografia morfologica (20\u00B0-22\u00B0settimana), ecografia flussimetrica (36\u00B0-38\u00B0 settimana)','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[0][3][3]=new Array('D. Nei casi di minaccia d\u2019aborto verificare le dimensioni e la localizzazione dei distacchi placentari','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[0][3][4]=new Array('E. Tutte le precedenti','<img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3"><br><b>Corretto!</b>',1,100,1);
+I[1]=new Array();I[1][0]=100;
+I[1][1]='';
+I[1][2]='0';
+I[1][3]=new Array();
+I[1][3][0]=new Array('A. Opacit\u00E0 disomogenee a contorni sfumati','<img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[1][3][1]=new Array('B. Opacit\u00E0 lineari','<img src="cross.png" width="65" height="65"> <audio preload="auto" autoplay src="Wrong.mp3">',0,0,1);
+I[1][3][2]=new Array('C. Opacit\u00E0 omogenee a vetro smerigliato','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[1][3][3]=new Array('D. Opacit\u00E0 disomogenee a contorni netti','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[1][3][4]=new Array('E. Segno della silhouette','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[2]=new Array();I[2][0]=100;
+I[2][1]='';
+I[2][2]='0';
+I[2][3]=new Array();
+I[2][3][0]=new Array('A. Effetto formazione di coppie','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[2][3][1]=new Array('B. Effetto fotoelettrico','L\'effetto fotoelettrico (che si osserva per raggi con energia <25keV, ovvero quasi tutti quelli usati in diagnostica) Consta nell\'assorbimento totale del raggio x da parte di un elettrone del tessuto bersagliato, il quale viene scalzato dal proprio orbitale. L\'elettrone pu\u00F2 colpire altri elettroni, causando la ionizzazione di numerose molecole a catena (per questo i raggi x sono detti radiazioni ionizzanti)<br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[2][3][2]=new Array('C. Effetto paramagnetico','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[2][3][3]=new Array('D. Frequenza di Larmor','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[2][3][4]=new Array('E. Fenomeni di impedenza tissutale','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[3]=new Array();I[3][0]=100;
+I[3][1]='';
+I[3][2]='0';
+I[3][3]=new Array();
+I[3][3][0]=new Array('A. Anecogene','Le cisti sierose semplici, essendo ripiene di fluido uniforme, non presentano interfacce al proprio interno. Pertanto, non generando eco, risultano completamente anecogene.<br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[3][3][1]=new Array('B. Iperecogene','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[3][3][2]=new Array('C. Isodense','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[3][3][3]=new Array('D. Isoecogene','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[3][3][4]=new Array('E. Ipoecogene','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[4]=new Array();I[4][0]=100;
+I[4][1]='';
+I[4][2]='0';
+I[4][3]=new Array();
+I[4][3][0]=new Array('A. \u00C8 un metodo per calcolare l\u2019inclinazione dei raggi X incidenti','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[4][3][1]=new Array('B. Si usa per capire se un\u2019opacit\u00E0 nasce dal polmone o dalla pleura','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[4][3][2]=new Array('C. \u00C8 l\u2019angolo di isonazione che va utilizzato nel Color-Doppler','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[4][3][3]=new Array('D. \u00C8 una misura della gravit\u00E0 di una scoliosi','<img src="Illustrazioni/Angolo di Cobb.gif" alt="Angolo di Cobb.gif" title="Angolo di Cobb" width="300" height="300"/><br> Nel metodo di Cobb, si tracciano due linee su una RX antero-posteriore della colonna vertebrale, una che si estende dalla sommit\u00E0 della vertebra superiore pi\u00F9 inclinata e l\'altra dal fondo della vertebra inferiore pi\u00F9 inclinata. L\'angolo formato da queste linee \u00E8 l\'angolo di Cobb.<br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[4][3][4]=new Array('E. Nessuna delle precedenti','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[5]=new Array();I[5][0]=100;
+I[5][1]='';
+I[5][2]='0';
+I[5][3]=new Array();
+I[5][3][0]=new Array('A. Consente la diagnosi precoce','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[5][3][1]=new Array('B. \u00C8 sostitutivo della mineralometria ossea computerizzata (DEXA)','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[5][3][2]=new Array('C. Rileva le alterazioni tardivamente','<img src="https://prod-images-static.radiopaedia.org/images/612652/7cc0477e7f5dd8f657922b26c354f9_jumbo.jpg" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/><br> L\'osteopenia si manifesta come una riduzione diffusa della densit\u00E0 ossea. Le ossa mostrano una riduzione della radiodensit\u00E0 e la perdita di struttura trabecolare, ma diventano visibili all\'Rx solo quando si \u00E8 perduto circa il 30% di osso.<br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[5][3][3]=new Array('D. Consente di quantificare con precisione la perdita di massa ossea','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[5][3][4]=new Array('E. Tutte le precedenti','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[6]=new Array();I[6][0]=100;
+I[6][1]='';
+I[6][2]='0';
+I[6][3]=new Array();
+I[6][3][0]=new Array('A. La TC multistrato comporta tempi di acquisizione di immagini pi\u00F9 lunghi della RM','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[6][3][1]=new Array('B. La TC \u00E8 una tecnica multiparametrica, che dipende dall\u2019assorbimento dei raggi X','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[6][3][2]=new Array('C. La RM \u00E8 una tecnica multiparametrica e non utilizza radiazioni ionizzanti','La risonanza magnetica sfrutta campi elettromagnetici e non radiazioni ionizzanti. Mentre in tutte le altre metodiche di diagnostica per immagini il parametro di base per la costruzione delle immagini \u00E8 uno solo (radiodensit\u00E0 per la TC/Rx, ecogenicit\u00E0 per l\'ecografia), in RM i parametri sono tre (tempo di rilassamento longitudinale, tempo di rilassamento trasversale e densit\u00E0 protonica) e permettono di ottenere tre categorie di immagini completamente diverse.<br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[6][3][3]=new Array('D. In RM non vengono utilizzati mezzi di contrasto','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[6][3][4]=new Array('E. La RM \u00E8 una tecnica monoparametrica','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[7]=new Array();I[7][0]=100;
+I[7][1]='';
+I[7][2]='0';
+I[7][3]=new Array();
+I[7][3][0]=new Array('A. In visione frontale: il polipo ha un margine interno netto ed uno esterno sfumato; il diverticolo ha un margine esterno netto ed uno interno sfumato','<img src="http://www.alessandrofeo.it/images/diverticolosi.jpg" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/><br>Diverticolosi<br><img src="https://www.eurorad.org/sites/default/files/styles/figure_image/public/figure_image/2018-08/0000000786/000004.jpg?itok=RP09X_Ul" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/><br>Polipo<br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[7][3][1]=new Array('B. Si introduce prima il mezzo di contrasto opaco e poi quello gassoso, trasparente','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[7][3][2]=new Array('C. \u00C8 necessario eseguire precedentemente la pulizia del colon con un purgante','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[7][3][3]=new Array('D. Talvolta \u00E8 necessario somministrare un antispastico per via endovenosa per ridurre la contrazione della parete','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[7][3][4]=new Array('E. Tutte le precedenti','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[8]=new Array();I[8][0]=100;
+I[8][1]='';
+I[8][2]='0';
+I[8][3]=new Array();
+I[8][3][0]=new Array('A. In qualsiasi periodo','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[8][3][1]=new Array('B. In fase premestruale','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[8][3][2]=new Array('C. In fase ovulatoria','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[8][3][3]=new Array('D. Entro i primi 10 giorni dall\u2019inizio delle mestruazioni','Uno studio pubblicato su Radiology mostra che l\u2019esame mammografico, eseguito in un contesto di screening, \u00E8 pi\u00F9 sensibile durante la fase follicolare del ciclo mestruale. A determinare i risultati sono i cambiamenti della struttura della mammella nelle diverse fasi del ciclo: durante la fase follicolare il seno \u00E8 meno denso e ingrossato e ci\u00F2 rende pi\u00F9 agevole il riconoscimento di eventuali lesioni (oltre a fare meno male alla compressione, risultando pi\u00F9 agevole per la pazente).<br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[8][3][4]=new Array('E. In fase post-ovulatoria','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[9]=new Array();I[9][0]=100;
+I[9][1]='';
+I[9][2]='0';
+I[9][3]=new Array();
+I[9][3][0]=new Array('A. Stipsi cronica','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[9][3][1]=new Array('B. Sospetto perforazione intestinale','Una controindicazione assoluta al MdC baritato \u00E8 rappresentata dal sospetto di perforazione o occlusione gastro-intestinale, poich\u00E9 il bario, ben tollerato e farmacologicamente inerte all\u2019interno del canale alimentare, \u00E8 un potente agente irritante in grado di indurre una peritonite chimica se entra in contatto con il peritoneo.<br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[9][3][2]=new Array('C. Insufficienza renale cronica','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[9][3][3]=new Array('D. Diabete','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[9][3][4]=new Array('E. Malattia di Crohn','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[10]=new Array();I[10][0]=100;
+I[10][1]='';
+I[10][2]='0';
+I[10][3]=new Array();
+I[10][3][0]=new Array('A. Sovradistensione delle anse','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[10][3][1]=new Array('B. Formazione di livelli idroaerei','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[10][3][2]=new Array('C. Formazione di falci d\u2019aria sottodiaframmatiche o antideclivi','<img src="https://prod-images-static.radiopaedia.org/images/2880689/cbbdd476a4f5ff073970202da68051_jumbo.jpg" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/><br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[10][3][3]=new Array('D. Modificazione della distribuzione della anse','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[10][3][4]=new Array('E. Segno della \u201CDoppia bolla gassosa\u201D','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[11]=new Array();I[11][0]=100;
+I[11][1]='';
+I[11][2]='0';
+I[11][3]=new Array();
+I[11][3][0]=new Array('A. Esame ecografico','<img src="Illustrazioni/Nodulo epatico.png" alt="Nodulo epatico.png" title="Nodulo epatico" width="467" height="300" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/><br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[11][3][1]=new Array('B. Esame radiologico diretto','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[11][3][2]=new Array('C. Colecistografia','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[11][3][3]=new Array('D. Colangio-RM','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[11][3][4]=new Array('E. TC addome','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[12]=new Array();I[12][0]=100;
+I[12][1]='';
+I[12][2]='0';
+I[12][3]=new Array();
+I[12][3][0]=new Array('A. Ecotomografia con color-Doppler','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[12][3][1]=new Array('B. RM','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[12][3][2]=new Array('C. Arteriografia','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[12][3][3]=new Array('D. TC','Nel sospeto clinico di carcinoma polmonare, la radiografia tradizionale del torace \u00E8 l\'esame da eseguire in prima istanza. Nei pazienti con Rx sospetta si deve poi eseguire una TC <i>total body</i>,, in quanto questa da sola fornisce tutte le informazioni necessarie alla diagnosi e stadiazione del carcinoma polmonare, oltre a fornire una guida all\'esecuzione della biopsia. <br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[12][3][4]=new Array('E. Tutte le precedenti','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[13]=new Array();I[13][0]=100;
+I[13][1]='';
+I[13][2]='0';
+I[13][3]=new Array();
+I[13][3][0]=new Array('A. Ecografia transaddominale','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[13][3][1]=new Array('B. Angio-TC','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[13][3][2]=new Array('C. Ecografia transvaginale','<img src="Illustrazioni/Endometriosi.png" alt="Endometriosi.png" title="Endometriosi" width="400" height="157" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/><br>L\'ecografia trans-vaginale \u00E8 l\'esame da fare in prima istanza nel sospetto di endometriosi. Essa presenta infatti buona sensibilit\u00E0 e specificit\u00E0, e nel caso di endometriosi profonda consente di valutare il grado di mobilit\u00E0 delle strutture interessate dalla fibrosi. La RM invece ha importanza nella valutazione dell\'estenzione della patologia, oltre che nella valutazione delle lesioni complesse. In alto, Immagini ecografiche transvaginali da esperti (ETVUS) che mostrano l\'endometriosi che coinvolge il retto anteriore, che appare come un impianto solido, non comprimibile e ipoecogeno <br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[13][3][3]=new Array('D. Isterosalpingografia','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[13][3][4]=new Array('E. Radiografia diretta dell\u2019addome','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[14]=new Array();I[14][0]=100;
+I[14][1]='';
+I[14][2]='0';
+I[14][3]=new Array();
+I[14][3][0]=new Array('A. 30-39 anni','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[14][3][1]=new Array('B. 40-49 anni','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[14][3][2]=new Array('C. 50-69 anni','In questa fascia d\'et\u00E0 si concentra infatti la maggior parte dei tumori del seno e, secondo gli esperti dell\'Agenzia internazionale per la ricerca sul cancro (IARC), la partecipazione allo screening, organizzato su invito attivo con queste modalit\u00E0 e frequenza, in questa fascia di et\u00E0 pu\u00F2 ridurre del 40% la mortalit\u00E0 per questa malattia. Estensioni di questa fascia di et\u00E0 sono in sperimentazione, in quanto l\'estensione della mammografia alle quarantenni potrebbe garantire una ulteriore riduzione della mortalit\u00E0 per cancro al seno, sebbene comunque inferiore a quella che si ottiene nella fascia 50-69 anni.<br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[14][3][3]=new Array('D. >70 anni','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[14][3][4]=new Array('E. Nessuna delle precedenti','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[15]=new Array();I[15][0]=100;
+I[15][1]='';
+I[15][2]='0';
+I[15][3]=new Array();
+I[15][3][0]=new Array('A. Secrezione siero-ematica dal capezzolo','<img src="https://www.medicentergroup.it/wp-content/uploads/2018/03/Duttogalattografia-300x0.jpg" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/><br>La duttogalatografia consiste nell\'iniezione tramite ago fine di mdc iodato nel dotto secernerte e nella successiva esecuzione di proiezioni mammografiche standard. Le indicazioni riguardano i casi di secrezione mammaria ematica o sieroematica monolaterale e monoorifiziale, <u>e in nessun altro tipo di secrezione.</u><br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[15][3][1]=new Array('B. Mastodinia','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[15][3][2]=new Array('C. Nodulo mammario palpabile','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[15][3][3]=new Array('D. Secrezione lattescente da entrambi i capezzoli','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[15][3][4]=new Array('E. Tensione mammaria','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[16]=new Array();I[16][0]=100;
+I[16][1]='';
+I[16][2]='0';
+I[16][3]=new Array();
+I[16][3][0]=new Array('A. Al posto della mammografia nello screening di lesioni non palpabili','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[16][3][1]=new Array('B. Come esame complementare alla mammografia e alla visita clinica','L\'ecografia incrementa i valori di sensibilit\u00E0 e specificit\u00E0 della mammografia, in quanto i due esami coprono le vicendevoli debolezze: in caso di mammelle principalemente parenchimatose, l\'eco ha una sensibilit\u00E0 maggiore (le lesioni appaiono ipoecogene, laddove il parenchima mammario \u00E8 iperecogeno), mentre in caso di mammelle principalemente adipose (il grasso \u00E8 ipoecogeno), le lesioni si vedono meglio alla mammografia (apparendo esse molto radiopache, al contrario del grasso, ma come il parenchima).<br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[16][3][2]=new Array('C. Solo per l\u2019esecuzione di agoaspirati mirati','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[16][3][3]=new Array('D. Nelle mammelle in involuzione fibro-adiposa','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[16][3][4]=new Array('E. In caso di secrezione siero-ematica dal capezzolo','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[17]=new Array();I[17][0]=100;
+I[17][1]='';
+I[17][2]='0';
+I[17][3]=new Array();
+I[17][3][0]=new Array('A. Ecografia','<img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3"><br><b>Corretto!</b>',1,100,1);
+I[17][3][1]=new Array('B. RM','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[17][3][2]=new Array('C. TC','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[17][3][3]=new Array('D. Colangiografia endovenosa','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[17][3][4]=new Array('E. ERCP','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[18]=new Array();I[18][0]=100;
+I[18][1]='';
+I[18][2]='0';
+I[18][3]=new Array();
+I[18][3][0]=new Array('A. Versamento pleurico','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[18][3][1]=new Array('B. Bronchite cronica','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[18][3][2]=new Array('C. Enfisema polmonare','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[18][3][3]=new Array('D. Edema interstiziale','<img src="Illustrazioni/kerley B.jpg" alt="kerley B.jpg" title="kerley B" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/><br>Le linee B di Kerley (frecce) sono linee orizzontali nella periferia polmonare che si estendono alla superficie pleurica. Indicano setti interlobulari ispessiti ed edematosi spesso dovuti a edema polmonare. Si trovano perifericamente a contatto con la pleura, ma sono generalmente assenti lungo le superfici fissurali. Possono essere viste in qualsiasi zona, ma sono pi\u00F9 frequentemente osservate alle basi polmonari agli angoli costofrrenici sulla radiografia PA e nella regione sub-esterna sulle radiografie laterali. <br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[18][3][4]=new Array('E. Addensamento flogistico','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[19]=new Array();I[19][0]=100;
+I[19][1]='';
+I[19][2]='0';
+I[19][3]=new Array();
+I[19][3][0]=new Array('A. Tendini della cuffia dei rotatori','<img src="https://www.formativezone.it/wp-content/uploads/2019/08/cuffia-dei-rotatori-1024x512.jpg" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/><br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[19][3][1]=new Array('B. Cercine glenoideo','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[19][3][2]=new Array('C. Legamento coraco-acromiale','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[19][3][3]=new Array('D. Capsula articolare','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[19][3][4]=new Array('E. Legamenti gleno-omerali','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[20]=new Array();I[20][0]=100;
+I[20][1]='';
+I[20][2]='0';
+I[20][3]=new Array();
+I[20][3][0]=new Array('A. Le cellule neoplastiche consumano pi\u00F9 glucosio delle cellule normali','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[20][3][1]=new Array('B. Questo tipo di glucosio rimane bloccato dentro le cellule','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[20][3][2]=new Array('C. Il 18F \u00E8 un emittore di positroni','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[20][3][3]=new Array('D. Il positrone prodotto dal 18 F si annichila con un elettrone','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[20][3][4]=new Array('E. Tutte le precedenti','<img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3"><br><b>Corretto!</b>',1,100,1);
+I[21]=new Array();I[21][0]=100;
+I[21][1]='';
+I[21][2]='0';
+I[21][3]=new Array();
+I[21][3][0]=new Array('A. \u00C8 una pratica sperimentale','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[21][3][1]=new Array('B. Pu\u00F2 essere effettuata con radicalit\u00E0 oncologica','Nel caso in cui si abbia una neoformazione singola e <2-4 cm.<br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[21][3][2]=new Array('C. Comporta una lunga ospedalizzazione del paziente','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[21][3][3]=new Array('D. \u00C8 gravata da un\u2019alta mortalit\u00E0','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[21][3][4]=new Array('E. Porta alla distruzione totale di un intero rene','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[22]=new Array();I[22][0]=100;
+I[22][1]='';
+I[22][2]='0';
+I[22][3]=new Array();
+I[22][3][0]=new Array('A. Effetto specchio','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[22][3][1]=new Array('B. Ombre acustiche laterali','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[22][3][2]=new Array('C. Rinforzo di parete posteriore','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[22][3][3]=new Array('D. Cono d\u2019ombra posteriore','<img src="https://appuntiecografia.altervista.org/PATOLOGIADDOMINALE/Calcolo%20della%20colecisti.jpeg" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/><br>La forte impedenza creata dal calcio che costituisce il calcolo determina un blocco alla propagazione oltre la struttura ed una pressoche\' totale riflessione del segnale ecografico alla sonda.<br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[22][3][4]=new Array('E. Aliasing','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[23]=new Array();I[23][0]=100;
+I[23][1]='';
+I[23][2]='0';
+I[23][3]=new Array();
+I[23][3][0]=new Array('A. Densit\u00E0 protonica','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[23][3][1]=new Array('B. Effetto Compton','L\'effetto Compton si verifica con raggi X di enegia >25 keV. Consiste nell\'assorbimento totale di un raggio X da parte di un elettrone (come nell\'effeto fotoelettrico), tuttavia in questo caso si ha un surplus di energia rispetto a quella necessaria ad allontanarsi dal proprio orbitale, energia che viene rilasciata come un nuovo raggio X di energia inferiore e direzione diversa dall\'originale. <br> <img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[23][3][2]=new Array('C. Tempo di rilassamento T1','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[23][3][3]=new Array('D. Flusso','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[23][3][4]=new Array('E. Tempo di rilassamento T2','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[24]=new Array();I[24][0]=100;
+I[24][1]='';
+I[24][2]='0';
+I[24][3]=new Array();
+I[24][3][0]=new Array('A. Angio-RM','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[24][3][1]=new Array('B. Angiografia','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[24][3][2]=new Array('C. Color- doppler','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[24][3][3]=new Array('D. Angio-TC','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[24][3][4]=new Array('E. Tutte le precedenti','<img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3"><br><b>Corretto!</b>',1,100,1);
+I[25]=new Array();I[25][0]=100;
+I[25][1]='';
+I[25][2]='0';
+I[25][3]=new Array();
+I[25][3][0]=new Array('A. Uno strumento di misura dei raggi cosmici','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[25][3][1]=new Array('B. Una apparecchiatura di medicina nucleare','La gamma camera \u00E8 l\'apparecchiatura utilizzata in medicina nucleare per l\'acquisizione delle immagini scintigrafiche. Queste ultime rappresentano visivamente la distribuzione nel corpo umano della radioattivit\u00E0 emessa dai radiofarmaci iniettati nel paziente a scopo diagnostico o terapeutico. \u00C8 costituita da due elementi fondamentali: il collimatore e un sistema di localizzazione fotonica. <b>Il collimatore</b> \u00E8 costituito da una lastra di materiale assorbente (solitamente piombo) in cui sono praticati dei fori. In tal modo, possono passare attraverso i fori esclusivamente i raggi che si muovono nella direzione scelta, mentre i restanti verranno assorbiti. Dopo il collimatore, vi \u00E8 un cristallo scintillatore \u2014 solitamente di ioduro di sodio attivato al tallio: NaI(Tl) \u2014 che converte i raggi in scintille di luce di bassa intensit\u00E0; queste scintille sono rilevate poi da sensori ad alta sensibilit\u00E0, detti fotomoltiplicatori, che costituiscono il <b>sistema di localizzazione fotonica</b> e che restituiscono in uscita un fascio di elettroni il cui numero dipende dalla quantit\u00E0 di luce che li colpisce.<br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[25][3][2]=new Array('C. Un luogo di riunione della confraternita Gamma','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[25][3][3]=new Array('D. Un ambiente riservato allo stoccaggio di prodotti radioattivi','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[25][3][4]=new Array('E. Nessuna delle precedenti','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[26]=new Array();I[26][0]=100;
+I[26][1]='';
+I[26][2]='0';
+I[26][3]=new Array();
+I[26][3][0]=new Array('A. Frequenza','<img src="https://commons.wikimedia.org/wiki/File:Attenuation_graphic.jpg#/media/File:Attenuation_graphic.jpg" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/><br>A causa dell\'<b>attenuazione lineare</b>, all\'aumentare della frequenza degli ultrasuoni si ha una maggiore tendenza a dissipare la propria energia nell\'attraversare i tessuti. Nel grafico \u00E8 rappresentato l\'andamento dell\'ampiezza di un\'onda piana che si propaga in un mezzo generico al variare della frequenza.<br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[26][3][1]=new Array('B. Potenza di emissione','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[26][3][2]=new Array('C. Focalizzazione della sonda','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[26][3][3]=new Array('D. Esperienza dell\u2019operatore','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[26][3][4]=new Array('E. Temperatura dei tessuti','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[27]=new Array();I[27][0]=100;
+I[27][1]='';
+I[27][2]='0';
+I[27][3]=new Array();
+I[27][3][0]=new Array('A. Presenza di circoli collaterali porto-sistemici','<img src="https://image.slidesharecdn.com/fegatoanatomiaepatologiapompili-160321145724/95/pompili-m-fegato-anatomia-e-patologia-diffusa-colecisti-e-vie-biliari-asmad-2016-60-638.jpg?cb=1458572686" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/><br>Il concetto \u00E8 simile a quello mostrato nella slide.<br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[27][3][1]=new Array('B. Aumento del rapporto lobo caudato/lobo destro','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[27][3][2]=new Array('C. Splenomegalia, nodularit\u00E0 dei margini epatici','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[27][3][3]=new Array('D. Calibro della vena porta inferiore a 10 mm','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[27][3][4]=new Array('E. Tutte le precedenti','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[28]=new Array();I[28][0]=100;
+I[28][1]='';
+I[28][2]='0';
+I[28][3]=new Array();
+I[28][3][0]=new Array('A. Uso di TC del torace, con mezzo di contrasto, nella popolazione generale','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[28][3][1]=new Array('B. Uso di apparecchiature TC dedicate allo studio del parenchima polmonare','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[28][3][2]=new Array('C. Uso di TC ad emissione di elettroni','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[28][3][3]=new Array('D. Uso di TC del torace, senza mezzo di contrasto, nella popolazione a rischio','<img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3"><br><b>Corretto!</b>',1,100,1);
+I[28][3][4]=new Array('E. Uso di biopsia percutanea TC guidata per la diagnosi dei noduli polmonari sospetti','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[29]=new Array();I[29][0]=100;
+I[29][1]='';
+I[29][2]='0';
+I[29][3]=new Array();
+I[29][3][0]=new Array('A. Ortopantomografia','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[29][3][1]=new Array('B. Tc','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[29][3][2]=new Array('C. RM','<img src="https://radiologiamatera.it/wp-content/uploads/2018/01/articolazioni-temporo-mandibolari-300x243.png" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/><br>Il menisco \u00E8 una struttura cartilaginea biconcava, con una forma leggermente allungata che riempie lo spazio tra le due superfici articolari incongrue dei condili mandibolari e le fosse temporali. Grazie alla struttura biconcava e attraverso la sua continua deformazione, si adatta alle necessit\u00E0 del movimento articolare, durante lo scivolamento dei condili in avanti nel movimento di apertura della bocca.<br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[29][3][3]=new Array('D. Spect','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[29][3][4]=new Array('E. Nessuna delle precedenti','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[30]=new Array();I[30][0]=100;
+I[30][1]='';
+I[30][2]='0';
+I[30][3]=new Array();
+I[30][3][0]=new Array('A. Cavografia superiore','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[30][3][1]=new Array('B. TC spirale con mezzo di contrasto','<img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3"><br><b>Corretto!</b>',1,100,1);
+I[30][3][2]=new Array('C. RM','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[30][3][3]=new Array('D. Ecocolor-Doppler','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[30][3][4]=new Array('E. Radiografia del torace','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[31]=new Array();I[31][0]=100;
+I[31][1]='';
+I[31][2]='0';
+I[31][3]=new Array();
+I[31][3][0]=new Array('A. L\u2019ecografia pu\u00F2 essere sufficiente a porre la diagnosi','<img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3"><br><b>Corretto!</b>',1,100,1);
+I[31][3][1]=new Array('B. \u00C8 necessario eseguire un radiogramma diretto per la ricerca di calcificazioni','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[31][3][2]=new Array('C. \u00C8 necessaria l\u2019esecuzione di una arteriografia per la conferma diagnostica','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[31][3][3]=new Array('D. \u00C8 necessaria l\u2019esecuzione di una biopsia percutanea per la conferma diagnostica','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[31][3][4]=new Array('E. La PET \u00E8 l\u2019esame di prima istanza','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[32]=new Array();I[32][0]=100;
+I[32][1]='';
+I[32][2]='0';
+I[32][3]=new Array();
+I[32][3][0]=new Array('A. Radiografia diretta dell\u2019addome','Sebbene non possa mettere in evidenza calcoli radiotrasparenti, l\'Rx diretta addome \u00E8 superiore all\'ecografia per la rilevazione di calcoli ureterali (che dato il contesto retroperitoneale sono difficilmente raggiungibili dagli ultrasuoni).<br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[32][3][1]=new Array('B. Tomografia Computerizzata della colonna lombare','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[32][3][2]=new Array('C. Elettromiografia della parete addominale anteriore','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[32][3][3]=new Array('D. Scintigrafia renale','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[32][3][4]=new Array('E. Risonanza Magnetica della colonna lombare','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[33]=new Array();I[33][0]=100;
+I[33][1]='';
+I[33][2]='0';
+I[33][3]=new Array();
+I[33][3][0]=new Array('A. La scintigrafia ossea','L\'esame si basa sull\'iniezione di un bisfosfonato marcato con 99mTc. I bifosfonati sono farmaci un una distrubuzione rapida quasi esclusivamente ossea (lo stato stazionario viene raggiunto in circa 1h e il volume medio di distribuzione, esclusivo dell\'osso, \u00E8 di 28 litri). I bibosfonati vengono assorbiti maggiormente laddove si ha un aumentato ricamaneggiamento osseo, cosa che caratterizza le metastasi, dove pertanto si osserver\u00E0 un\'iperconcentrazione di tracciante.<br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[33][3][1]=new Array('B. La RM','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[33][3][2]=new Array('C. La TC','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[33][3][3]=new Array('D. La radiografia convenzionale','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[33][3][4]=new Array('E. Nessuna delle precedenti','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[34]=new Array();I[34][0]=100;
+I[34][1]='';
+I[34][2]='0';
+I[34][3]=new Array();
+I[34][3][0]=new Array('A. TC','<img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3"><br><b>Corretto!</b>',1,100,1);
+I[34][3][1]=new Array('B. RM','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[34][3][2]=new Array('C. Ecografia','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[34][3][3]=new Array('D. Scintigrafia','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[34][3][4]=new Array('E. Angiografia','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[35]=new Array();I[35][0]=100;
+I[35][1]='';
+I[35][2]='0';
+I[35][3]=new Array();
+I[35][3][0]=new Array('A. TC','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[35][3][1]=new Array('B. Radiogramma diretto in due proiezioni','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[35][3][2]=new Array('C. Ecotomografia','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[35][3][3]=new Array('D. RM','<img src="https://radiologiaortopedica.it/sites/default/files/Diapositiva02_0.png" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/><br>Il legamento crociato anteriore normale mostra omogenea bassa intensit\u00E0 di segnale (ipointensit\u00E0) in tutte le sequenze, come tutti i legamenti e  tendini. Nell\'immagine coronale si distinguono il fascio antero-mediale e postero-laterale; in assiale la tipica morfologia a semiluna.<br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[35][3][4]=new Array('E. Fluoroscopia','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[36]=new Array();I[36][0]=100;
+I[36][1]='';
+I[36][2]='0';
+I[36][3]=new Array();
+I[36][3][0]=new Array('A. Patologia degenerativa su base artrosica','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[36][3][1]=new Array('B. Interessamento osteomielitico','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[36][3][2]=new Array('C. Patologia sinoviale infiammatoria','<img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3"><br><b>Corretto!</b>',1,100,1);
+I[36][3][3]=new Array('D. Fratture da stress','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[36][3][4]=new Array('E. Interessamento neoplastico','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[37]=new Array();I[37][0]=100;
+I[37][1]='';
+I[37][2]='0';
+I[37][3]=new Array();
+I[37][3][0]=new Array('A. L\u2019urografia','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[37][3][1]=new Array('B. L\u2019ecografia','<img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3"><br><b>Corretto!</b>',1,100,1);
+I[37][3][2]=new Array('C. La RM','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[37][3][3]=new Array('D. La pielografia retrograda','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[37][3][4]=new Array('E. Nessuna delle precedenti','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[38]=new Array();I[38][0]=100;
+I[38][1]='';
+I[38][2]='0';
+I[38][3]=new Array();
+I[38][3][0]=new Array('A. Ecotomografia','Grazie alla sua capacit\u00E0 di esaminare i tessuti molli, nel caso si sospetti una lesione, l\u2019ecografia \u00E8 l\u2019esame di primo livello utile per confermare o eliminare il sospetto diagnostico in presenza di stiramento muscolare o sospetto strappo, contusione con o senza ematomi intramuscolari o sottocutanei, dolore da infiammazione \u2013 come ad esempio nel caso di tendiniti, borsiti \u2013 e cisti<br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[38][3][1]=new Array('B. Xerografia','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[38][3][2]=new Array('C. Valutazione endoscopica','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[38][3][3]=new Array('D. Termografia','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[38][3][4]=new Array('E. Studio radiografico convenzionale','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[39]=new Array();I[39][0]=100;
+I[39][1]='';
+I[39][2]='0';
+I[39][3]=new Array();
+I[39][3][0]=new Array('A. Ecotomografia','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[39][3][1]=new Array('B. Xerografia','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[39][3][2]=new Array('C. RM','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[39][3][3]=new Array('D. TC','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[39][3][4]=new Array('E. Studio radiografico convenzionale','<img src="https://commons.wikimedia.org/wiki/File:Gruenholzfraktur_-_Unterarmfraktur.jpg#/media/File:Gruenholzfraktur_-_Unterarmfraktur.jpg" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/><br>Una frattura a legno verde \u00E8 una frattura che si verifica in un osso giovane, morbido ed elastico, nella quale l\'osso si piega e non si rompe. <br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[40]=new Array();I[40][0]=100;
+I[40][1]='';
+I[40][2]='0';
+I[40][3]=new Array();
+I[40][3][0]=new Array('A. Angioma semplice','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[40][3][1]=new Array('B. Angioma cavernoso','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[40][3][2]=new Array('C. Shunt porto-cavale','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[40][3][3]=new Array('D. Sospetta lesione neoplastica primitiva','<img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3"><br><b>Corretto!</b>',1,100,1);
+I[40][3][4]=new Array('E. Stasi biliare di natura litiasica','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[41]=new Array();I[41][0]=100;
+I[41][1]='';
+I[41][2]='0';
+I[41][3]=new Array();
+I[41][3][0]=new Array('A. Ecografia','<img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3"><br><b>Corretto!</b>',1,100,1);
+I[41][3][1]=new Array('B. Eco-color-Doppler','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[41][3][2]=new Array('C. Scintigrafia','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[41][3][3]=new Array('D. RM','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[41][3][4]=new Array('E. TC','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[42]=new Array();I[42][0]=100;
+I[42][1]='';
+I[42][2]='0';
+I[42][3]=new Array();
+I[42][3][0]=new Array('A. Il ripristino della magnetizzazione longitudinale','<img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3"><br><b>Corretto!</b>',1,100,1);
+I[42][3][1]=new Array('B. Il ripristino della magnetizzazione trasversale','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[42][3][2]=new Array('C. La perdita di coerenza di fase degli spin','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[42][3][3]=new Array('D. La omologazione della frequenza degli spin','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[42][3][4]=new Array('E. Nessuno dei precedenti','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[43]=new Array();I[43][0]=100;
+I[43][1]='';
+I[43][2]='0';
+I[43][3]=new Array();
+I[43][3][0]=new Array('A. Studio con fluoroscopia','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[43][3][1]=new Array('B. TC, esclusivamente con ricostruzioni sagittali, senza m.d.c.','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[43][3][2]=new Array('C. RM con e senza m.d.c.','L\'osteolisi si riferisce al processo fisiologico del metabolismo osseo della perdita ossea normalmente in equilibrio con la formazione ossea (osteogenesi), o aumenta gradualmente con il naturale processo di invecchiamento. Se l\'osteolisi ha un significato patologico, \u00E8 una dissoluzione ossea correlata alla malattia o una decomposizione ossea di gravit\u00E0 variabile e dovuta a varie cause. I processi osteolitici sono spesso associati all\'osteoporosi o al cancro del midollo osseo.<br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[43][3][3]=new Array('D. Angiografia','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[43][3][4]=new Array('E. Ecografia','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[44]=new Array();I[44][0]=100;
+I[44][1]='';
+I[44][2]='0';
+I[44][3]=new Array();
+I[44][3][0]=new Array('A. Angiografia','<img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3"><br><b>Corretto!</b>',1,100,1);
+I[44][3][1]=new Array('B. Studio radiografico diretto','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[44][3][2]=new Array('C. TC','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[44][3][3]=new Array('D. RM','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[44][3][4]=new Array('E. Ecotomografia','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[45]=new Array();I[45][0]=100;
+I[45][1]='';
+I[45][2]='0';
+I[45][3]=new Array();
+I[45][3][0]=new Array('A. Ecografia','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[45][3][1]=new Array('B. TC','<img src="Illustrazioni/Timoma.jpg" alt="Timoma.jpg" title="Timoma" width="474" height="323" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/><br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[45][3][2]=new Array('C. Eco-color-doppler con m.d.c.','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[45][3][3]=new Array('D. Radiogramma standard del torace','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[45][3][4]=new Array('E. SPECT','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[46]=new Array();I[46][0]=100;
+I[46][1]='';
+I[46][2]='0';
+I[46][3]=new Array();
+I[46][3][0]=new Array('A. Studio radiografico standard, eventualmente seguito da TC','<img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3"><br><b>Corretto!</b>',1,100,1);
+I[46][3][1]=new Array('B. Ecografia standard, seguita da Eco-color-doppler','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[46][3][2]=new Array('C. Angiografia selettiva dell\u2019arteria polmonare, seguita da TC','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[46][3][3]=new Array('D. RM, seguita da angiografia polmonare','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[46][3][4]=new Array('E. TC con ricostruzioni tridimensionali','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[47]=new Array();I[47][0]=100;
+I[47][1]='';
+I[47][2]='0';
+I[47][3]=new Array();
+I[47][3][0]=new Array('A. Epatiti acute','<img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3"><br><b>Corretto!</b>',1,100,1);
+I[47][3][1]=new Array('B. Cisti sierosa semplice','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[47][3][2]=new Array('C. Angioma epatico','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[47][3][3]=new Array('D. Ascesso epatico','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[47][3][4]=new Array('E. Ipertensione portale','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[48]=new Array();I[48][0]=100;
+I[48][1]='';
+I[48][2]='0';
+I[48][3]=new Array();
+I[48][3][0]=new Array('A. Esame radiografico diretto','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[48][3][1]=new Array('B. Ecotomografia','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[48][3][2]=new Array('C. TC','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[48][3][3]=new Array('D. Isterosalpingografia','<img src="https://www.my-personaltrainer.it/benessere/img/isterosalpingografia.gif" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/><br>L\'isterosalpingografia \u00E8 un esame radiografico dell\'utero e delle salpingi ottenuto mediante l\'opacizzazione con mezzo di contrasto dell\'utero e delle tube per mezzo di un catetere posizionato in utero. L\'isterosalpingografia \u00E8 spesso definita "test dell\'infertilit\u00E0". Un\'eventuale ostruzione delle tube di Falloppio ostacola infatti la fecondazione dell\'ovulo, diventando una possibile causa d\'infertilit\u00E0.<br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[48][3][4]=new Array('E. RM','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[49]=new Array();I[49][0]=100;
+I[49][1]='';
+I[49][2]='0';
+I[49][3]=new Array();
+I[49][3][0]=new Array('A. \u00C8 indicata','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[49][3][1]=new Array('B. \u00C8 potenzialmente carcinogenetica','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[49][3][2]=new Array('C. \u00C8 assolutamente controindicata','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[49][3][3]=new Array('D. Presenta una minore capacit\u00E0 di individuazione del carcinoma mammario per la costituzione ghiandolare','Secondo gli esperti della IARC, l\'estensione della mammografia alle quarantenni potrebbe garantire una ulteriore riduzione della mortalit\u00E0 per cancro al seno, sebbene inferiore a quella che si ottiene nella fascia 50-69 anni.<br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[49][3][4]=new Array('E. Presenta una maggiore capacit\u00E0 di individuazione del carcinoma mammario per la costituzione ghiandolare','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[50]=new Array();I[50][0]=100;
+I[50][1]='';
+I[50][2]='0';
+I[50][3]=new Array();
+I[50][3][0]=new Array('A. Esame radiologico del torace','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[50][3][1]=new Array('B. TC con mezzo di contrasto','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[50][3][2]=new Array('C. Accertamento bioptico','<img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3"><br><b>Corretto!</b>',1,100,1);
+I[50][3][3]=new Array('D. RM con mezzo di contrasto','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[50][3][4]=new Array('E. PET','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[51]=new Array();I[51][0]=100;
+I[51][1]='';
+I[51][2]='0';
+I[51][3]=new Array();
+I[51][3][0]=new Array('A. RM','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[51][3][1]=new Array('B. TC','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[51][3][2]=new Array('C. Urografia','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[51][3][3]=new Array('D. Ecografia','<img src="https://dccdn.de/www.doccheck.com/data/cl/qq/5z/pd/ps/ep/hydronephrose2_lg.jpg" width="300" height="300" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/><br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[51][3][4]=new Array('E. Radiografia diretta dell\u2019addome','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[52]=new Array();I[52][0]=100;
+I[52][1]='';
+I[52][2]='0';
+I[52][3]=new Array();
+I[52][3][0]=new Array('A. La termoablazione dei tumori','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[52][3][1]=new Array('B. I filtri cavali','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[52][3][2]=new Array('C. La chemio-embolizzazione dei tumori','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[52][3][3]=new Array('D. L\u2019angioplastica transluminale','La prima angioplastica coronarica \u00E8 stata effettuata il 16 settembre 1977 a Zurigo, in Svizzera, dal radiologo tedesco Andreas Roland Gr\u00FCntzig. Egli ha dilatato una stenosi serrata (80%) di una piccola porzione di circa 3 mm non ramificata dell\'arteria discendente anteriore (LAD). Gr\u00FCntzig present\u00F2 i risultati dei suoi primi quattro casi di angioplastica all\'American Heart Association (AHA), cosa che port\u00F2 a un diffuso riconoscimento del suo lavoro in tutto il mondo della cardiologia interventistica. I risultati di questo trattamento, pur utilizzando solo un prototipo di catetere a palloncino, seppur costruito con cura, ma "grezzo" secondo gli standard attuali, sono risultati pi\u00F9 che soddisfacenti.<br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[52][3][4]=new Array('E. Nessuna delle precedenti','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[53]=new Array();I[53][0]=100;
+I[53][1]='';
+I[53][2]='0';
+I[53][3]=new Array();
+I[53][3][0]=new Array('A. TC','<img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3"><br><b>Corretto!</b>',1,100,1);
+I[53][3][1]=new Array('B. RM','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[53][3][2]=new Array('C. Angiografia','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[53][3][3]=new Array('D. Ecografia','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[53][3][4]=new Array('E. Radiografia standard del torace','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[54]=new Array();I[54][0]=100;
+I[54][1]='';
+I[54][2]='0';
+I[54][3]=new Array();
+I[54][3][0]=new Array('A. Radiografia diretta del collo','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[54][3][1]=new Array('B. Scintigrafia','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[54][3][2]=new Array('C. TC','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[54][3][3]=new Array('D. RM','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[54][3][4]=new Array('E. Ecografia','<img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3"><br><b>Corretto!</b>',1,100,1);
+I[55]=new Array();I[55][0]=100;
+I[55][1]='';
+I[55][2]='0';
+I[55][3]=new Array();
+I[55][3][0]=new Array('A. No','L\'uso del solfato di bario in medicina \u00E8 dovuto alla sua elevata insolubilit\u00E0 e all\'opacit\u00E0 ai raggi X del bario, in virt\u00F9 al suo numero atomico relativamente alto (Z = 56). A rigore, il solfato di bario \u00E8 velenoso per l\'uomo, ma la sua scarsissima solubilit\u00E0 e inerzia lo rende di fatto innocuo: a mucosa integra, l\'assorbimento sistemico \u00E8 trascurabile ed esso viene espulso senza problemi dal paziente. <br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[55][3][1]=new Array('B. Si','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[55][3][2]=new Array('C. Dipende dalla quantit\u00E0','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[55][3][3]=new Array('D. Dipende dalla concentrazione','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[55][3][4]=new Array('E. Dipende dalla viscosit\u00E0','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[56]=new Array();I[56][0]=100;
+I[56][1]='';
+I[56][2]='0';
+I[56][3]=new Array();
+I[56][3][0]=new Array('A. Quando il lettino portapazienti e il tubo radiogeno sono fermi','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[56][3][1]=new Array('B. Quando il lettino portapazienti avanza all\u2019interno del gantry, contemporaneamente alla rotazione del tubo radiogeno','<img src="Illustrazioni/The-spiral-CT-scan-principle-in-multi-slice-scanning.png" alt="The-spiral-CT-scan-principle-in-multi-slice-scanning.png" title="The-spiral-CT-scan-principle-in-multi-slice-scanning" width="400" height="280" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/><br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[56][3][2]=new Array('C. Quando il lettino portapazienti avanza all\u2019interno del gantry, con tubo radiogeno fermo','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[56][3][3]=new Array('D. Quando il tubo radiogeno ruota e il lettino portapazienti \u00E8 fermo','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[56][3][4]=new Array('E. Nessuna delle precedenti','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[57]=new Array();I[57][0]=100;
+I[57][1]='';
+I[57][2]='0';
+I[57][3]=new Array();
+I[57][3][0]=new Array('A. La tecnica secondaria utilizzata per l\u2019esecuzione dell\u2019esame radiografico del torace','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[57][3][1]=new Array('B. Una tecnica che aumenta la distanza fuoco-sistema di rilevamento','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[57][3][2]=new Array('C. Una tecnica che riduce l\u2019ingrandimento di immagine','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[57][3][3]=new Array('D. Una tecnica che riduce l\u2019effetto penombra dei contorni','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[57][3][4]=new Array('E. Tutte le precedenti','La teleradiografie \u00E8 una tecnica diagnostica essenzialmente basata sul porre il soggetto a distanza relativamente grande dal tubo sorgente, in modo da utilizzare raggi praticamente paralleli e ottenere cos\u00EC un\u2019immagine radiografica di grandezza sostanzialmente uguale a quella anatomica degli organi in esame (per lo pi\u00F9 il cuore).<br><img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3">',1,100,1);
+I[58]=new Array();I[58][0]=100;
+I[58][1]='';
+I[58][2]='0';
+I[58][3]=new Array();
+I[58][3][0]=new Array('A. La TC dell\u2019encefalo, senza e con somministrazione di mezzo di contrasto','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[58][3][1]=new Array('B. La TC dell\u2019encefalo, senza somministrazione di mezzo di contrasto','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[58][3][2]=new Array('C. L\u2019angiografia cerebrale','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[58][3][3]=new Array('D. La RM dell\u2019encefalo, senza e con somministrazione di mezzo di contrasto','<img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3"><br><b>Corretto!</b>',1,100,1);
+I[58][3][4]=new Array('E. La RM dell\u2019encefalo, senza somministrazione di mezzo di contrasto','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[59]=new Array();I[59][0]=100;
+I[59][1]='';
+I[59][2]='0';
+I[59][3]=new Array();
+I[59][3][0]=new Array('A. Nello spazio retrocardiaco','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[59][3][1]=new Array('B. Tra le coste e lo sterno','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[59][3][2]=new Array('C. Tra la trachea e l\u2019arco polmonare','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+I[59][3][3]=new Array('D. Alla base del polmone','<img src="check-mark.png" width="65" height="65"> <audio preload="auto" autoplay src="Correct.mp3"><br><b>Corretto!</b>',1,100,1);
+I[59][3][4]=new Array('E. Nessuna delle precedenti','<img src="cross.png" width="65" height="65"><audio preload="auto" autoplay src="Wrong.mp3"><br><b>Sbagliato!</b>',0,0,1);
+
+
+function StartUp(){
+
+//If there's only one question, no need for question navigation controls
+	if (QsToShow < 2){
+		document.getElementById('QNav').style.display = 'none';
+	}
+	
+//Stash the instructions so they can be redisplayed
+	strInstructions = document.getElementById('InstructionsDiv').innerHTML;
+	
+
+	
+
+	
+
+	PreloadImages('check-mark.png','cross.png','Illustrazioni/Angolo di Cobb.gif','https://prod-images-static.radiopaedia.org/images/612652/7cc0477e7f5dd8f657922b26c354f9_jumbo.jpg','http://www.alessandrofeo.it/images/diverticolosi.jpg','https://www.eurorad.org/sites/default/files/styles/figure_image/public/figure_image/2018-08/0000000786/000004.jpg?itok=RP09X_Ul','https://prod-images-static.radiopaedia.org/images/2880689/cbbdd476a4f5ff073970202da68051_jumbo.jpg','Illustrazioni/Nodulo epatico.png','Illustrazioni/Endometriosi.png','https://www.medicentergroup.it/wp-content/uploads/2018/03/Duttogalattografia-300x0.jpg','Illustrazioni/kerley B.jpg','https://www.formativezone.it/wp-content/uploads/2019/08/cuffia-dei-rotatori-1024x512.jpg','https://appuntiecografia.altervista.org/PATOLOGIADDOMINALE/Calcolo%20della%20colecisti.jpeg','https://commons.wikimedia.org/wiki/File:Attenuation_graphic.jpg#/media/File:Attenuation_graphic.jpg','https://image.slidesharecdn.com/fegatoanatomiaepatologiapompili-160321145724/95/pompili-m-fegato-anatomia-e-patologia-diffusa-colecisti-e-vie-biliari-asmad-2016-60-638.jpg?cb=1458572686','https://radiologiamatera.it/wp-content/uploads/2018/01/articolazioni-temporo-mandibolari-300x243.png','https://radiologiaortopedica.it/sites/default/files/Diapositiva02_0.png','https://commons.wikimedia.org/wiki/File:Gruenholzfraktur_-_Unterarmfraktur.jpg#/media/File:Gruenholzfraktur_-_Unterarmfraktur.jpg','Illustrazioni/Timoma.jpg','https://www.my-personaltrainer.it/benessere/img/isterosalpingografia.gif','https://dccdn.de/www.doccheck.com/data/cl/qq/5z/pd/ps/ep/hydronephrose2_lg.jpg','Illustrazioni/The-spiral-CT-scan-principle-in-multi-slice-scanning.png','logo.png');
+
+	
+	CompleteEmptyFeedback();
+
+	SetUpQuestions();
+	ClearTextBoxes();
+	CreateStatusArray();
+	
+
+	
+//Check search string for q parameter
+	if (document.location.search.length > 0){
+		if (ShuffleQs == false){
+			var JumpTo = parseInt(document.location.search.substring(1,document.location.search.length))-1;
+			if (JumpTo <= QsToShow){
+				ChangeQ(JumpTo);
+			}
+		}
+	}
+//Undocumented function added 10/12/2004
+	ShowSpecialReadingForQuestion();
+}
+
+function ShowHideQuestions(){
+	document.getElementById('ShowMethodButton').style.display = 'none';
+	if (ShowingAllQuestions == false){
+		for (var i=0; i<QArray.length; i++){
+				QArray[i].style.display = '';
+			}
+		document.getElementById('Questions').style.listStyleType = 'decimal';
+		document.getElementById('OneByOneReadout').style.display = 'none';
+		document.getElementById('ShowMethodButton').innerHTML = ShowOneByOneCaption;
+		ShowingAllQuestions = true;
+	}
+	else{
+		for (var i=0; i<QArray.length; i++){
+				if (i != CurrQNum){
+					QArray[i].style.display = 'none';
+				}
+			}
+		document.getElementById('Questions').style.listStyleType = 'none';
+		document.getElementById('OneByOneReadout').style.display = '';
+		document.getElementById('ShowMethodButton').innerHTML = ShowAllQuestionsCaption;
+		ShowingAllQuestions = false;	
+	}
+	document.getElementById('ShowMethodButton').style.display = 'inline';
+}
+
+function CreateStatusArray(){
+	var QNum, ANum;
+//For each item in the item array
+	for (QNum=0; QNum<I.length; QNum++){
+//Check if the question still exists (hasn't been nuked by showing a random selection)
+		if (document.getElementById('Q_' + QNum) != null){
+			State[QNum] = new Array();
+			State[QNum][0] = -1; //Score for this q; -1 shows question not done yet
+			State[QNum][1] = new Array(); //answers
+			for (ANum = 0; ANum<I[QNum][3].length; ANum++){
+				State[QNum][1][ANum] = 0; //answer not chosen yet; when chosen, will store its position in the series of choices
+			}
+			State[QNum][2] = 0; //tries at this q so far
+			State[QNum][3] = 0; //incrementing percent-correct values of selected answers
+			State[QNum][4] = 0; //penalties incurred for hints
+			State[QNum][5] = ''; //Sequence of answers chosen by number
+		}
+		else{
+			State[QNum] = null;
+		}
+	}
+}
+
+
+
+function CheckMCAnswer(QNum, ANum, Btn){
+//if question doesn't exist, bail
+	if (State[QNum].length < 1){return;}
+	
+//Get the feedback
+	Feedback = I[QNum][3][ANum][1];
+	
+//Now show feedback and bail if question already complete
+	if (State[QNum][0] > -1){
+//Add an extra message explaining that the question
+// is finished if defined by the user
+		if (strQuestionFinished.length > 0){Feedback += '<br />' + strQuestionFinished;}
+//Show the feedback
+		ShowMessage(Feedback);
+//New for 6.2.2.1: If you want to mark an answer as correct even when it's the final choice, uncomment this line.
+//		if (I[QNum][3][ANum][2] >= 1){Btn.innerHTML = CorrectIndicator;}else{Btn.innerHTML = IncorrectIndicator;}	
+		return;
+	}
+	
+//Hide the button while processing
+	Btn.style.display = 'none';
+
+//Increment the number of tries
+	State[QNum][2]++;
+	
+//Add the percent-correct value of this answer
+	State[QNum][3] += I[QNum][3][ANum][3];
+	
+//Store the try number in the answer part of the State array, for tracking purposes
+	State[QNum][1][ANum] = State[QNum][2];
+	if (State[QNum][5].length > 0){State[QNum][5] += ' | ';}
+	State[QNum][5] += String.fromCharCode(65+ANum);
+	
+//Should this answer be accepted as correct?
+	if (I[QNum][3][ANum][2] < 1){
+//It's wrong
+
+//Mark the answer
+		Btn.innerHTML = IncorrectIndicator;
+		
+//Remove any previous score unless exercise is finished (6.0.3.8+)
+		if (Finished == false){
+			WriteToInstructions(strInstructions);
+		}	
+		
+//Check whether this leaves just one MC answer unselected, in which case the Q is terminated
+		var RemainingAnswer = FinalAnswer(QNum);
+		if (RemainingAnswer > -1){
+//Behave as if the last answer had been selected, but give no credit for it
+//Increment the number of tries
+			State[QNum][2]++;		
+		
+//Calculate the score for this question
+			CalculateMCQuestionScore(QNum);
+			
+//Get the overall score and add it to the feedback
+			CalculateOverallScore();
+//New for 6.2.2.1
+			var QsDone = CheckQuestionsCompleted();
+			if ((ContinuousScoring == true)||(Finished == true)){
+				Feedback += '<br />' + YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone;
+				WriteToInstructions(YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone);
+			}
+			else{
+				WriteToInstructions(QsDone);
+			}
+		}
+	}
+	else{
+//It's right
+//Mark the answer
+		Btn.innerHTML = CorrectIndicator;
+				
+//Calculate the score for this question
+		CalculateMCQuestionScore(QNum);
+		
+//New for 6.2.2.0
+		var QsDone = CheckQuestionsCompleted();
+
+//Get the overall score and add it to the feedback
+		if (ContinuousScoring == true){
+			CalculateOverallScore();
+			if ((ContinuousScoring == true)||(Finished == true)){
+				Feedback += '<br />' + YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone;
+				WriteToInstructions(YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone);
+			}
+		}
+		else{
+			WriteToInstructions(QsDone);
+		}
+	}
+	
+//Show the button again
+	Btn.style.display = 'inline';
+	
+//Finally, show the feedback	
+	ShowMessage(Feedback);
+	
+//Check whether all questions are now done
+	CheckFinished();
+}
+
+function CalculateMCQuestionScore(QNum){
+	var Tries = State[QNum][2] + State[QNum][4]; //include tries and hint penalties
+	var PercentCorrect = State[QNum][3];
+	var TotAns = GetTotalMCAnswers(QNum);
+	var HintPenalties = State[QNum][4];
+	
+//Make sure it's not already complete
+
+	if (State[QNum][0] < 0){
+//Allow for Hybrids
+		if (HintPenalties >= 1){
+			State[QNum][0] = 0;
+		}
+		else{
+//This line calculates the score for this question
+			if (TotAns == 1){
+				State[QNum][0] = 1;
+			}
+			else{
+				State[QNum][0] = ((TotAns-((Tries*100)/State[QNum][3]))/(TotAns-1));
+			}
+		}
+//Fix for Safari bug added for version 6.0.3.42 (negative infinity problem)
+		if ((State[QNum][0] < 0)||(State[QNum][0] == Number.NEGATIVE_INFINITY)){
+			State[QNum][0] = 0;
+		}
+	}
+}
+
+function GetTotalMCAnswers(QNum){
+	var Result = 0;
+	for (var ANum=0; ANum<I[QNum][3].length; ANum++){
+		if (I[QNum][3][ANum][4] == 1){ //This is an MC answer
+			Result++;
+		}
+	}
+	return Result;
+}
+
+function FinalAnswer(QNum){
+	var UnchosenAnswers = 0;
+	var FinalAnswer = -1;
+	for (var ANum=0; ANum<I[QNum][3].length; ANum++){
+		if (I[QNum][3][ANum][4] == 1){ //This is an MC answer
+			if (State[QNum][1][ANum] < 1){ //This answer hasn't been chosen yet
+				UnchosenAnswers++;
+				FinalAnswer = ANum;
+			}
+		}
+	}
+	if (UnchosenAnswers == 1){
+		return FinalAnswer;
+	}
+	else{
+		return -1;
+	}
+}
+
+
+
+
+
+function CalculateOverallScore(){
+	var TotalWeighting = 0;
+	var TotalScore = 0;
+	
+	for (var QNum=0; QNum<State.length; QNum++){
+		if (State[QNum] != null){
+			if (State[QNum][0] > -1){
+				TotalWeighting += I[QNum][0];
+				TotalScore += (I[QNum][0] * State[QNum][0]);
+			}
+		}
+	}
+	if (TotalWeighting > 0){
+		Score = Math.floor((TotalScore/TotalWeighting)*100);
+	}
+	else{
+//if TotalWeighting is 0, no questions so far have any value, so 
+//no penalty should be shown.
+		Score = 100; 
+	}
+}
+
+//New for 6.2.2.0
+function CheckQuestionsCompleted(){
+	if (ShowCompletedSoFar == false){return '';}
+	var QsCompleted = 0;
+	for (var QNum=0; QNum<State.length; QNum++){
+		if (State[QNum] != null){
+			if (State[QNum][0] >= 0){
+				QsCompleted++;
+			}
+		}
+	}
+//Fixes for 6.2.2.2
+	if (QsCompleted >= QArray.length){
+		return ExerciseCompleted;
+	}
+	else{
+		return CompletedSoFar + ' ' + QsCompleted + '/' + QArray.length + '.';
+	}
+}
+
+function CheckFinished(){
+	var FB = '';
+	var AllDone = true;
+	for (var QNum=0; QNum<State.length; QNum++){
+		if (State[QNum] != null){
+			if (State[QNum][0] < 0){
+				AllDone = false;
+			}
+		}
+	}
+	if (AllDone == true){
+	
+//Report final score and submit if necessary
+		CalculateOverallScore();
+		FB = YourScoreIs + ' ' + Score + '%.';
+		if (ShowCorrectFirstTime == true){
+			var CFT = 0;
+			for (QNum=0; QNum<State.length; QNum++){
+				if (State[QNum] != null){
+					if (State[QNum][0] >= 1){
+						CFT++;
+					}
+				}
+			}
+			FB += '<br />' + CorrectFirstTime + ' ' + CFT + '/' + QsToShow;
+		}
+		
+//New for 6.2.2.0
+		FB += '<br />' + ExerciseCompleted;
+		
+		WriteToInstructions(FB);
+		
+		Finished == true;
+
+
+
+
+		TimeOver = true;
+		Locked = true;
+		
+
+
+		Finished = true;
+		Detail = '<?xml version="1.0"?><hpnetresult><fields>';
+		for (QNum=0; QNum<State.length; QNum++){
+			if (State[QNum] != null){
+				if (State[QNum][5].length > 0){
+					Detail += '<field><fieldname>Question #' + (QNum+1) + '</fieldname><fieldtype>question-tracking</fieldtype><fieldlabel>Q ' + (QNum+1) + '</fieldlabel><fieldlabelid>QuestionTrackingField</fieldlabelid><fielddata>' + State[QNum][5] + '</fielddata></field>';
+				}
+			}
+		}
+		Detail += '</fields></hpnetresult>';
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+//-->
+
+//]]>
+
+</script>
+
+
+</head>
+
+<body onload="StartUp()" id="TheBody" >
+
+<!-- BeginTopNavButtons -->
+
+
+
+<!-- EndTopNavButtons -->
+
+<div class="Titles">
+	<h2 class="ExerciseTitle"><a href="index.html"><img src="logo.png" width="500" height="169.783"></a></h2>
+
+	<h3 class="ExerciseSubtitle">Rispondi e ripeti i quiz fino a non sbagliare mai, solo cos&#x00EC; potrai essere <i><b>ZOBELIFICATO!!!</b></i></h3>
+
+
+
+</div>
+
+<div id="InstructionsDiv" class="StdDiv">
+	<div id="Instructions"></div>
+</div>
+
+
+<div id="ContainerDiv">
+
+
+
+<div class="ExerciseContainer">
+
+<div id="QNav" class="QuestionNavigation">
+
+<p style="text-align: right;">
+<button id="ShowMethodButton" class="FuncButton" onclick="ShowHideQuestions(); return false;">Visualizzazione domande in serie</button>
+</p>
+
+<div id="OneByOneReadout">
+<button id="PrevQButton" class="FuncButton" onclick="ChangeQ(-1); return false;"><b>&#x2190;</b></button>
+
+<span id="QNumReadout" class="QNum">&#160;</span>
+
+<button id="NextQButton" class="FuncButton" onclick="ChangeQ(1); return false;"><b>&#x2192;</b></button>
+<br />
+</div>
+
+</div>
+ 
+<ol class="QuizQuestions" id="Questions">
+<li class="QuizQuestion" id="Q_0" style="display: none;"><div class="QuestionText">Quale delle seguenti affermazioni sono corrette nell&#x2019;uso dell&#x2019;ecografia durante una gravidanza?<br /></div><ol class="MCAnswers"><li id="Q_0_0"><button class="FuncButton" id="Q_0_0_Btn" onclick="CheckMCAnswer(0,0,this)">?</button>&#160;&#160;A. Controllare la regolare evoluzione di una gravidanza</li><li id="Q_0_1"><button class="FuncButton" id="Q_0_1_Btn" onclick="CheckMCAnswer(0,1,this)">?</button>&#160;&#160;B. Individuare eventuali anomalie dello sviluppo fetale</li><li id="Q_0_2"><button class="FuncButton" id="Q_0_2_Btn" onclick="CheckMCAnswer(0,2,this)">?</button>&#160;&#160;C. Eseguire non pi&#x00F9; di tre controlli ecografici: entro il 3&#x00B0; mese, ecografia morfologica (20&#x00B0;-22&#x00B0;settimana), ecografia flussimetrica (36&#x00B0;-38&#x00B0; settimana)</li><li id="Q_0_3"><button class="FuncButton" id="Q_0_3_Btn" onclick="CheckMCAnswer(0,3,this)">?</button>&#160;&#160;D. Nei casi di minaccia d&#x2019;aborto verificare le dimensioni e la localizzazione dei distacchi placentari</li><li id="Q_0_4"><button class="FuncButton" id="Q_0_4_Btn" onclick="CheckMCAnswer(0,4,this)">?</button>&#160;&#160;E. Tutte le precedenti</li></ol></li>
+<li class="QuizQuestion" id="Q_1" style="display: none;"><div class="QuestionText">Quali sono le caratteristiche radiologiche delle opacit&#x00E0; alveolari?<br /></div><ol class="MCAnswers"><li id="Q_1_0"><button class="FuncButton" id="Q_1_0_Btn" onclick="CheckMCAnswer(1,0,this)">?</button>&#160;&#160;A. Opacit&#x00E0; disomogenee a contorni sfumati</li><li id="Q_1_1"><button class="FuncButton" id="Q_1_1_Btn" onclick="CheckMCAnswer(1,1,this)">?</button>&#160;&#160;B. Opacit&#x00E0; lineari</li><li id="Q_1_2"><button class="FuncButton" id="Q_1_2_Btn" onclick="CheckMCAnswer(1,2,this)">?</button>&#160;&#160;C. Opacit&#x00E0; omogenee a vetro smerigliato</li><li id="Q_1_3"><button class="FuncButton" id="Q_1_3_Btn" onclick="CheckMCAnswer(1,3,this)">?</button>&#160;&#160;D. Opacit&#x00E0; disomogenee a contorni netti</li><li id="Q_1_4"><button class="FuncButton" id="Q_1_4_Btn" onclick="CheckMCAnswer(1,4,this)">?</button>&#160;&#160;E. Segno della silhouette</li></ol></li>
+<li class="QuizQuestion" id="Q_2" style="display: none;"><div class="QuestionText">L&#x2019;assorbimento dei raggi X in radiodiagnostica avviene prevalentemente per:<br /></div><ol class="MCAnswers"><li id="Q_2_0"><button class="FuncButton" id="Q_2_0_Btn" onclick="CheckMCAnswer(2,0,this)">?</button>&#160;&#160;A. Effetto formazione di coppie</li><li id="Q_2_1"><button class="FuncButton" id="Q_2_1_Btn" onclick="CheckMCAnswer(2,1,this)">?</button>&#160;&#160;B. Effetto fotoelettrico</li><li id="Q_2_2"><button class="FuncButton" id="Q_2_2_Btn" onclick="CheckMCAnswer(2,2,this)">?</button>&#160;&#160;C. Effetto paramagnetico</li><li id="Q_2_3"><button class="FuncButton" id="Q_2_3_Btn" onclick="CheckMCAnswer(2,3,this)">?</button>&#160;&#160;D. Frequenza di Larmor</li><li id="Q_2_4"><button class="FuncButton" id="Q_2_4_Btn" onclick="CheckMCAnswer(2,4,this)">?</button>&#160;&#160;E. Fenomeni di impedenza tissutale</li></ol></li>
+<li class="QuizQuestion" id="Q_3" style="display: none;"><div class="QuestionText">Come appaiono in ecografia epatica le cisti sierose semplici?<br /></div><ol class="MCAnswers"><li id="Q_3_0"><button class="FuncButton" id="Q_3_0_Btn" onclick="CheckMCAnswer(3,0,this)">?</button>&#160;&#160;A. Anecogene</li><li id="Q_3_1"><button class="FuncButton" id="Q_3_1_Btn" onclick="CheckMCAnswer(3,1,this)">?</button>&#160;&#160;B. Iperecogene</li><li id="Q_3_2"><button class="FuncButton" id="Q_3_2_Btn" onclick="CheckMCAnswer(3,2,this)">?</button>&#160;&#160;C. Isodense</li><li id="Q_3_3"><button class="FuncButton" id="Q_3_3_Btn" onclick="CheckMCAnswer(3,3,this)">?</button>&#160;&#160;D. Isoecogene</li><li id="Q_3_4"><button class="FuncButton" id="Q_3_4_Btn" onclick="CheckMCAnswer(3,4,this)">?</button>&#160;&#160;E. Ipoecogene</li></ol></li>
+<li class="QuizQuestion" id="Q_4" style="display: none;"><div class="QuestionText">L&#x2019;angolo di Cobb:<br /></div><ol class="MCAnswers"><li id="Q_4_0"><button class="FuncButton" id="Q_4_0_Btn" onclick="CheckMCAnswer(4,0,this)">?</button>&#160;&#160;A. &#x00C8; un metodo per calcolare l&#x2019;inclinazione dei raggi X incidenti</li><li id="Q_4_1"><button class="FuncButton" id="Q_4_1_Btn" onclick="CheckMCAnswer(4,1,this)">?</button>&#160;&#160;B. Si usa per capire se un&#x2019;opacit&#x00E0; nasce dal polmone o dalla pleura</li><li id="Q_4_2"><button class="FuncButton" id="Q_4_2_Btn" onclick="CheckMCAnswer(4,2,this)">?</button>&#160;&#160;C. &#x00C8; l&#x2019;angolo di isonazione che va utilizzato nel Color-Doppler</li><li id="Q_4_3"><button class="FuncButton" id="Q_4_3_Btn" onclick="CheckMCAnswer(4,3,this)">?</button>&#160;&#160;D. &#x00C8; una misura della gravit&#x00E0; di una scoliosi</li><li id="Q_4_4"><button class="FuncButton" id="Q_4_4_Btn" onclick="CheckMCAnswer(4,4,this)">?</button>&#160;&#160;E. Nessuna delle precedenti</li></ol></li>
+<li class="QuizQuestion" id="Q_5" style="display: none;"><div class="QuestionText">L&#x2019;esame radiografico standard nell&#x2019;osteopenia:<br /></div><ol class="MCAnswers"><li id="Q_5_0"><button class="FuncButton" id="Q_5_0_Btn" onclick="CheckMCAnswer(5,0,this)">?</button>&#160;&#160;A. Consente la diagnosi precoce</li><li id="Q_5_1"><button class="FuncButton" id="Q_5_1_Btn" onclick="CheckMCAnswer(5,1,this)">?</button>&#160;&#160;B. &#x00C8; sostitutivo della mineralometria ossea computerizzata (DEXA)</li><li id="Q_5_2"><button class="FuncButton" id="Q_5_2_Btn" onclick="CheckMCAnswer(5,2,this)">?</button>&#160;&#160;C. Rileva le alterazioni tardivamente</li><li id="Q_5_3"><button class="FuncButton" id="Q_5_3_Btn" onclick="CheckMCAnswer(5,3,this)">?</button>&#160;&#160;D. Consente di quantificare con precisione la perdita di massa ossea</li><li id="Q_5_4"><button class="FuncButton" id="Q_5_4_Btn" onclick="CheckMCAnswer(5,4,this)">?</button>&#160;&#160;E. Tutte le precedenti</li></ol></li>
+<li class="QuizQuestion" id="Q_6" style="display: none;"><div class="QuestionText">Quali delle seguenti affermazioni &#x00E8; corretta?<br /></div><ol class="MCAnswers"><li id="Q_6_0"><button class="FuncButton" id="Q_6_0_Btn" onclick="CheckMCAnswer(6,0,this)">?</button>&#160;&#160;A. La TC multistrato comporta tempi di acquisizione di immagini pi&#x00F9; lunghi della RM</li><li id="Q_6_1"><button class="FuncButton" id="Q_6_1_Btn" onclick="CheckMCAnswer(6,1,this)">?</button>&#160;&#160;B. La TC &#x00E8; una tecnica multiparametrica, che dipende dall&#x2019;assorbimento dei raggi X</li><li id="Q_6_2"><button class="FuncButton" id="Q_6_2_Btn" onclick="CheckMCAnswer(6,2,this)">?</button>&#160;&#160;C. La RM &#x00E8; una tecnica multiparametrica e non utilizza radiazioni ionizzanti</li><li id="Q_6_3"><button class="FuncButton" id="Q_6_3_Btn" onclick="CheckMCAnswer(6,3,this)">?</button>&#160;&#160;D. In RM non vengono utilizzati mezzi di contrasto</li><li id="Q_6_4"><button class="FuncButton" id="Q_6_4_Btn" onclick="CheckMCAnswer(6,4,this)">?</button>&#160;&#160;E. La RM &#x00E8; una tecnica monoparametrica</li></ol></li>
+<li class="QuizQuestion" id="Q_7" style="display: none;"><div class="QuestionText">Nel clisma del colon a doppio contrasto quali delle seguenti affermazioni &#x00E8; vera?<br /></div><ol class="MCAnswers"><li id="Q_7_0"><button class="FuncButton" id="Q_7_0_Btn" onclick="CheckMCAnswer(7,0,this)">?</button>&#160;&#160;A. In visione frontale: il polipo ha un margine interno netto ed uno esterno sfumato; il diverticolo ha un margine esterno netto ed uno interno sfumato</li><li id="Q_7_1"><button class="FuncButton" id="Q_7_1_Btn" onclick="CheckMCAnswer(7,1,this)">?</button>&#160;&#160;B. Si introduce prima il mezzo di contrasto opaco e poi quello gassoso, trasparente</li><li id="Q_7_2"><button class="FuncButton" id="Q_7_2_Btn" onclick="CheckMCAnswer(7,2,this)">?</button>&#160;&#160;C. &#x00C8; necessario eseguire precedentemente la pulizia del colon con un purgante</li><li id="Q_7_3"><button class="FuncButton" id="Q_7_3_Btn" onclick="CheckMCAnswer(7,3,this)">?</button>&#160;&#160;D. Talvolta &#x00E8; necessario somministrare un antispastico per via endovenosa per ridurre la contrazione della parete</li><li id="Q_7_4"><button class="FuncButton" id="Q_7_4_Btn" onclick="CheckMCAnswer(7,4,this)">?</button>&#160;&#160;E. Tutte le precedenti</li></ol></li>
+<li class="QuizQuestion" id="Q_8" style="display: none;"><div class="QuestionText">In quale periodo del ciclo mestruale &#x00E8; meglio eseguire una mammografia?<br /></div><ol class="MCAnswers"><li id="Q_8_0"><button class="FuncButton" id="Q_8_0_Btn" onclick="CheckMCAnswer(8,0,this)">?</button>&#160;&#160;A. In qualsiasi periodo</li><li id="Q_8_1"><button class="FuncButton" id="Q_8_1_Btn" onclick="CheckMCAnswer(8,1,this)">?</button>&#160;&#160;B. In fase premestruale</li><li id="Q_8_2"><button class="FuncButton" id="Q_8_2_Btn" onclick="CheckMCAnswer(8,2,this)">?</button>&#160;&#160;C. In fase ovulatoria</li><li id="Q_8_3"><button class="FuncButton" id="Q_8_3_Btn" onclick="CheckMCAnswer(8,3,this)">?</button>&#160;&#160;D. Entro i primi 10 giorni dall&#x2019;inizio delle mestruazioni</li><li id="Q_8_4"><button class="FuncButton" id="Q_8_4_Btn" onclick="CheckMCAnswer(8,4,this)">?</button>&#160;&#160;E. In fase post-ovulatoria</li></ol></li>
+<li class="QuizQuestion" id="Q_9" style="display: none;"><div class="QuestionText">I mezzi di contrasto bariati sono controindicati in pazienti con:<br /></div><ol class="MCAnswers"><li id="Q_9_0"><button class="FuncButton" id="Q_9_0_Btn" onclick="CheckMCAnswer(9,0,this)">?</button>&#160;&#160;A. Stipsi cronica</li><li id="Q_9_1"><button class="FuncButton" id="Q_9_1_Btn" onclick="CheckMCAnswer(9,1,this)">?</button>&#160;&#160;B. Sospetto perforazione intestinale</li><li id="Q_9_2"><button class="FuncButton" id="Q_9_2_Btn" onclick="CheckMCAnswer(9,2,this)">?</button>&#160;&#160;C. Insufficienza renale cronica</li><li id="Q_9_3"><button class="FuncButton" id="Q_9_3_Btn" onclick="CheckMCAnswer(9,3,this)">?</button>&#160;&#160;D. Diabete</li><li id="Q_9_4"><button class="FuncButton" id="Q_9_4_Btn" onclick="CheckMCAnswer(9,4,this)">?</button>&#160;&#160;E. Malattia di Crohn</li></ol></li>
+<li class="QuizQuestion" id="Q_10" style="display: none;"><div class="QuestionText">Quale segno radiologico consente di diagnosticare l&#x2019;accumulo di aria libera in addome?<br /></div><ol class="MCAnswers"><li id="Q_10_0"><button class="FuncButton" id="Q_10_0_Btn" onclick="CheckMCAnswer(10,0,this)">?</button>&#160;&#160;A. Sovradistensione delle anse</li><li id="Q_10_1"><button class="FuncButton" id="Q_10_1_Btn" onclick="CheckMCAnswer(10,1,this)">?</button>&#160;&#160;B. Formazione di livelli idroaerei</li><li id="Q_10_2"><button class="FuncButton" id="Q_10_2_Btn" onclick="CheckMCAnswer(10,2,this)">?</button>&#160;&#160;C. Formazione di falci d&#x2019;aria sottodiaframmatiche o antideclivi</li><li id="Q_10_3"><button class="FuncButton" id="Q_10_3_Btn" onclick="CheckMCAnswer(10,3,this)">?</button>&#160;&#160;D. Modificazione della distribuzione della anse</li><li id="Q_10_4"><button class="FuncButton" id="Q_10_4_Btn" onclick="CheckMCAnswer(10,4,this)">?</button>&#160;&#160;E. Segno della &#x201C;Doppia bolla gassosa&#x201D;</li></ol></li>
+<li class="QuizQuestion" id="Q_11" style="display: none;"><div class="QuestionText">In un paziente con sospetto di lesione epatica, qual &#x00E8; la metodica di imaging di prima istanza?<br /></div><ol class="MCAnswers"><li id="Q_11_0"><button class="FuncButton" id="Q_11_0_Btn" onclick="CheckMCAnswer(11,0,this)">?</button>&#160;&#160;A. Esame ecografico</li><li id="Q_11_1"><button class="FuncButton" id="Q_11_1_Btn" onclick="CheckMCAnswer(11,1,this)">?</button>&#160;&#160;B. Esame radiologico diretto</li><li id="Q_11_2"><button class="FuncButton" id="Q_11_2_Btn" onclick="CheckMCAnswer(11,2,this)">?</button>&#160;&#160;C. Colecistografia</li><li id="Q_11_3"><button class="FuncButton" id="Q_11_3_Btn" onclick="CheckMCAnswer(11,3,this)">?</button>&#160;&#160;D. Colangio-RM</li><li id="Q_11_4"><button class="FuncButton" id="Q_11_4_Btn" onclick="CheckMCAnswer(11,4,this)">?</button>&#160;&#160;E. TC addome</li></ol></li>
+<li class="QuizQuestion" id="Q_12" style="display: none;"><div class="QuestionText">Nel sospetto clinico-radiologico di un carcinoma polmonare, l&#x2019;esame pi&#x00F9; indicato &#x00E8;:<br /></div><ol class="MCAnswers"><li id="Q_12_0"><button class="FuncButton" id="Q_12_0_Btn" onclick="CheckMCAnswer(12,0,this)">?</button>&#160;&#160;A. Ecotomografia con color-Doppler</li><li id="Q_12_1"><button class="FuncButton" id="Q_12_1_Btn" onclick="CheckMCAnswer(12,1,this)">?</button>&#160;&#160;B. RM</li><li id="Q_12_2"><button class="FuncButton" id="Q_12_2_Btn" onclick="CheckMCAnswer(12,2,this)">?</button>&#160;&#160;C. Arteriografia</li><li id="Q_12_3"><button class="FuncButton" id="Q_12_3_Btn" onclick="CheckMCAnswer(12,3,this)">?</button>&#160;&#160;D. TC</li><li id="Q_12_4"><button class="FuncButton" id="Q_12_4_Btn" onclick="CheckMCAnswer(12,4,this)">?</button>&#160;&#160;E. Tutte le precedenti</li></ol></li>
+<li class="QuizQuestion" id="Q_13" style="display: none;"><div class="QuestionText">Qual &#x00E8; l&#x2019;indagine pi&#x00F9; accurata nello stabilire una patologia endometriale?<br /></div><ol class="MCAnswers"><li id="Q_13_0"><button class="FuncButton" id="Q_13_0_Btn" onclick="CheckMCAnswer(13,0,this)">?</button>&#160;&#160;A. Ecografia transaddominale</li><li id="Q_13_1"><button class="FuncButton" id="Q_13_1_Btn" onclick="CheckMCAnswer(13,1,this)">?</button>&#160;&#160;B. Angio-TC</li><li id="Q_13_2"><button class="FuncButton" id="Q_13_2_Btn" onclick="CheckMCAnswer(13,2,this)">?</button>&#160;&#160;C. Ecografia transvaginale</li><li id="Q_13_3"><button class="FuncButton" id="Q_13_3_Btn" onclick="CheckMCAnswer(13,3,this)">?</button>&#160;&#160;D. Isterosalpingografia</li><li id="Q_13_4"><button class="FuncButton" id="Q_13_4_Btn" onclick="CheckMCAnswer(13,4,this)">?</button>&#160;&#160;E. Radiografia diretta dell&#x2019;addome</li></ol></li>
+<li class="QuizQuestion" id="Q_14" style="display: none;"><div class="QuestionText">In base agli studi clinici randomizzati si &#x00E8; stabilito che lo screening mammografico &#x00E8; pi&#x00F9; utile nel ridurre la mortalit&#x00E0; per cancro in donne di et&#x00E0; compresa tra:<br /></div><ol class="MCAnswers"><li id="Q_14_0"><button class="FuncButton" id="Q_14_0_Btn" onclick="CheckMCAnswer(14,0,this)">?</button>&#160;&#160;A. 30-39 anni</li><li id="Q_14_1"><button class="FuncButton" id="Q_14_1_Btn" onclick="CheckMCAnswer(14,1,this)">?</button>&#160;&#160;B. 40-49 anni</li><li id="Q_14_2"><button class="FuncButton" id="Q_14_2_Btn" onclick="CheckMCAnswer(14,2,this)">?</button>&#160;&#160;C. 50-69 anni</li><li id="Q_14_3"><button class="FuncButton" id="Q_14_3_Btn" onclick="CheckMCAnswer(14,3,this)">?</button>&#160;&#160;D. &gt;70 anni</li><li id="Q_14_4"><button class="FuncButton" id="Q_14_4_Btn" onclick="CheckMCAnswer(14,4,this)">?</button>&#160;&#160;E. Nessuna delle precedenti</li></ol></li>
+<li class="QuizQuestion" id="Q_15" style="display: none;"><div class="QuestionText">La duttogalattografia &#x00E8; indicata solo nei casi di:<br /></div><ol class="MCAnswers"><li id="Q_15_0"><button class="FuncButton" id="Q_15_0_Btn" onclick="CheckMCAnswer(15,0,this)">?</button>&#160;&#160;A. Secrezione siero-ematica dal capezzolo</li><li id="Q_15_1"><button class="FuncButton" id="Q_15_1_Btn" onclick="CheckMCAnswer(15,1,this)">?</button>&#160;&#160;B. Mastodinia</li><li id="Q_15_2"><button class="FuncButton" id="Q_15_2_Btn" onclick="CheckMCAnswer(15,2,this)">?</button>&#160;&#160;C. Nodulo mammario palpabile</li><li id="Q_15_3"><button class="FuncButton" id="Q_15_3_Btn" onclick="CheckMCAnswer(15,3,this)">?</button>&#160;&#160;D. Secrezione lattescente da entrambi i capezzoli</li><li id="Q_15_4"><button class="FuncButton" id="Q_15_4_Btn" onclick="CheckMCAnswer(15,4,this)">?</button>&#160;&#160;E. Tensione mammaria</li></ol></li>
+<li class="QuizQuestion" id="Q_16" style="display: none;"><div class="QuestionText">L&#x2019;indagine ecografica della mammella &#x00E8; indicata:<br /></div><ol class="MCAnswers"><li id="Q_16_0"><button class="FuncButton" id="Q_16_0_Btn" onclick="CheckMCAnswer(16,0,this)">?</button>&#160;&#160;A. Al posto della mammografia nello screening di lesioni non palpabili</li><li id="Q_16_1"><button class="FuncButton" id="Q_16_1_Btn" onclick="CheckMCAnswer(16,1,this)">?</button>&#160;&#160;B. Come esame complementare alla mammografia e alla visita clinica</li><li id="Q_16_2"><button class="FuncButton" id="Q_16_2_Btn" onclick="CheckMCAnswer(16,2,this)">?</button>&#160;&#160;C. Solo per l&#x2019;esecuzione di agoaspirati mirati</li><li id="Q_16_3"><button class="FuncButton" id="Q_16_3_Btn" onclick="CheckMCAnswer(16,3,this)">?</button>&#160;&#160;D. Nelle mammelle in involuzione fibro-adiposa</li><li id="Q_16_4"><button class="FuncButton" id="Q_16_4_Btn" onclick="CheckMCAnswer(16,4,this)">?</button>&#160;&#160;E. In caso di secrezione siero-ematica dal capezzolo</li></ol></li>
+<li class="QuizQuestion" id="Q_17" style="display: none;"><div class="QuestionText">Quale &#x00E8; la metodica pi&#x00F9; comunemente usata per facilitare la puntura percutanea delle vie biliari?<br /></div><ol class="MCAnswers"><li id="Q_17_0"><button class="FuncButton" id="Q_17_0_Btn" onclick="CheckMCAnswer(17,0,this)">?</button>&#160;&#160;A. Ecografia</li><li id="Q_17_1"><button class="FuncButton" id="Q_17_1_Btn" onclick="CheckMCAnswer(17,1,this)">?</button>&#160;&#160;B. RM</li><li id="Q_17_2"><button class="FuncButton" id="Q_17_2_Btn" onclick="CheckMCAnswer(17,2,this)">?</button>&#160;&#160;C. TC</li><li id="Q_17_3"><button class="FuncButton" id="Q_17_3_Btn" onclick="CheckMCAnswer(17,3,this)">?</button>&#160;&#160;D. Colangiografia endovenosa</li><li id="Q_17_4"><button class="FuncButton" id="Q_17_4_Btn" onclick="CheckMCAnswer(17,4,this)">?</button>&#160;&#160;E. ERCP</li></ol></li>
+<li class="QuizQuestion" id="Q_18" style="display: none;"><div class="QuestionText">A quale di queste patologie si associano con maggior frequenza le linee di Kerley di tipo B?<br /></div><ol class="MCAnswers"><li id="Q_18_0"><button class="FuncButton" id="Q_18_0_Btn" onclick="CheckMCAnswer(18,0,this)">?</button>&#160;&#160;A. Versamento pleurico</li><li id="Q_18_1"><button class="FuncButton" id="Q_18_1_Btn" onclick="CheckMCAnswer(18,1,this)">?</button>&#160;&#160;B. Bronchite cronica</li><li id="Q_18_2"><button class="FuncButton" id="Q_18_2_Btn" onclick="CheckMCAnswer(18,2,this)">?</button>&#160;&#160;C. Enfisema polmonare</li><li id="Q_18_3"><button class="FuncButton" id="Q_18_3_Btn" onclick="CheckMCAnswer(18,3,this)">?</button>&#160;&#160;D. Edema interstiziale</li><li id="Q_18_4"><button class="FuncButton" id="Q_18_4_Btn" onclick="CheckMCAnswer(18,4,this)">?</button>&#160;&#160;E. Addensamento flogistico</li></ol></li>
+<li class="QuizQuestion" id="Q_19" style="display: none;"><div class="QuestionText">La pi&#x00F9; frequente indicazione clinica all&#x2019;esame ecografico della spalla riguarda lo studio di:<br /></div><ol class="MCAnswers"><li id="Q_19_0"><button class="FuncButton" id="Q_19_0_Btn" onclick="CheckMCAnswer(19,0,this)">?</button>&#160;&#160;A. Tendini della cuffia dei rotatori</li><li id="Q_19_1"><button class="FuncButton" id="Q_19_1_Btn" onclick="CheckMCAnswer(19,1,this)">?</button>&#160;&#160;B. Cercine glenoideo</li><li id="Q_19_2"><button class="FuncButton" id="Q_19_2_Btn" onclick="CheckMCAnswer(19,2,this)">?</button>&#160;&#160;C. Legamento coraco-acromiale</li><li id="Q_19_3"><button class="FuncButton" id="Q_19_3_Btn" onclick="CheckMCAnswer(19,3,this)">?</button>&#160;&#160;D. Capsula articolare</li><li id="Q_19_4"><button class="FuncButton" id="Q_19_4_Btn" onclick="CheckMCAnswer(19,4,this)">?</button>&#160;&#160;E. Legamenti gleno-omerali</li></ol></li>
+<li class="QuizQuestion" id="Q_20" style="display: none;"><div class="QuestionText">In medicina nucleare il tracciante pi&#x00F9; utilizzato per la PET &#x00E8; il fluoro-desossiglucosio. Il motivo di questa scelta &#x00E8; dato da:<br /></div><ol class="MCAnswers"><li id="Q_20_0"><button class="FuncButton" id="Q_20_0_Btn" onclick="CheckMCAnswer(20,0,this)">?</button>&#160;&#160;A. Le cellule neoplastiche consumano pi&#x00F9; glucosio delle cellule normali</li><li id="Q_20_1"><button class="FuncButton" id="Q_20_1_Btn" onclick="CheckMCAnswer(20,1,this)">?</button>&#160;&#160;B. Questo tipo di glucosio rimane bloccato dentro le cellule</li><li id="Q_20_2"><button class="FuncButton" id="Q_20_2_Btn" onclick="CheckMCAnswer(20,2,this)">?</button>&#160;&#160;C. Il 18F &#x00E8; un emittore di positroni</li><li id="Q_20_3"><button class="FuncButton" id="Q_20_3_Btn" onclick="CheckMCAnswer(20,3,this)">?</button>&#160;&#160;D. Il positrone prodotto dal 18 F si annichila con un elettrone</li><li id="Q_20_4"><button class="FuncButton" id="Q_20_4_Btn" onclick="CheckMCAnswer(20,4,this)">?</button>&#160;&#160;E. Tutte le precedenti</li></ol></li>
+<li class="QuizQuestion" id="Q_21" style="display: none;"><div class="QuestionText">La termoablazione percutanea di un piccolo adenocarcinoma renale:<br /></div><ol class="MCAnswers"><li id="Q_21_0"><button class="FuncButton" id="Q_21_0_Btn" onclick="CheckMCAnswer(21,0,this)">?</button>&#160;&#160;A. &#x00C8; una pratica sperimentale</li><li id="Q_21_1"><button class="FuncButton" id="Q_21_1_Btn" onclick="CheckMCAnswer(21,1,this)">?</button>&#160;&#160;B. Pu&#x00F2; essere effettuata con radicalit&#x00E0; oncologica</li><li id="Q_21_2"><button class="FuncButton" id="Q_21_2_Btn" onclick="CheckMCAnswer(21,2,this)">?</button>&#160;&#160;C. Comporta una lunga ospedalizzazione del paziente</li><li id="Q_21_3"><button class="FuncButton" id="Q_21_3_Btn" onclick="CheckMCAnswer(21,3,this)">?</button>&#160;&#160;D. &#x00C8; gravata da un&#x2019;alta mortalit&#x00E0;</li><li id="Q_21_4"><button class="FuncButton" id="Q_21_4_Btn" onclick="CheckMCAnswer(21,4,this)">?</button>&#160;&#160;E. Porta alla distruzione totale di un intero rene</li></ol></li>
+<li class="QuizQuestion" id="Q_22" style="display: none;"><div class="QuestionText">Qual &#x00E8; il segno ecografico che caratterizza i calcoli<br /></div><ol class="MCAnswers"><li id="Q_22_0"><button class="FuncButton" id="Q_22_0_Btn" onclick="CheckMCAnswer(22,0,this)">?</button>&#160;&#160;A. Effetto specchio</li><li id="Q_22_1"><button class="FuncButton" id="Q_22_1_Btn" onclick="CheckMCAnswer(22,1,this)">?</button>&#160;&#160;B. Ombre acustiche laterali</li><li id="Q_22_2"><button class="FuncButton" id="Q_22_2_Btn" onclick="CheckMCAnswer(22,2,this)">?</button>&#160;&#160;C. Rinforzo di parete posteriore</li><li id="Q_22_3"><button class="FuncButton" id="Q_22_3_Btn" onclick="CheckMCAnswer(22,3,this)">?</button>&#160;&#160;D. Cono d&#x2019;ombra posteriore</li><li id="Q_22_4"><button class="FuncButton" id="Q_22_4_Btn" onclick="CheckMCAnswer(22,4,this)">?</button>&#160;&#160;E. Aliasing</li></ol></li>
+<li class="QuizQuestion" id="Q_23" style="display: none;"><div class="QuestionText">Il segnale RM, indotto nella bobina ricevente, non dipende da:<br /></div><ol class="MCAnswers"><li id="Q_23_0"><button class="FuncButton" id="Q_23_0_Btn" onclick="CheckMCAnswer(23,0,this)">?</button>&#160;&#160;A. Densit&#x00E0; protonica</li><li id="Q_23_1"><button class="FuncButton" id="Q_23_1_Btn" onclick="CheckMCAnswer(23,1,this)">?</button>&#160;&#160;B. Effetto Compton</li><li id="Q_23_2"><button class="FuncButton" id="Q_23_2_Btn" onclick="CheckMCAnswer(23,2,this)">?</button>&#160;&#160;C. Tempo di rilassamento T1</li><li id="Q_23_3"><button class="FuncButton" id="Q_23_3_Btn" onclick="CheckMCAnswer(23,3,this)">?</button>&#160;&#160;D. Flusso</li><li id="Q_23_4"><button class="FuncButton" id="Q_23_4_Btn" onclick="CheckMCAnswer(23,4,this)">?</button>&#160;&#160;E. Tempo di rilassamento T2</li></ol></li>
+<li class="QuizQuestion" id="Q_24" style="display: none;"><div class="QuestionText">Quali delle seguenti tecniche sono utilizzate per lo studio dei vasi?<br /></div><ol class="MCAnswers"><li id="Q_24_0"><button class="FuncButton" id="Q_24_0_Btn" onclick="CheckMCAnswer(24,0,this)">?</button>&#160;&#160;A. Angio-RM</li><li id="Q_24_1"><button class="FuncButton" id="Q_24_1_Btn" onclick="CheckMCAnswer(24,1,this)">?</button>&#160;&#160;B. Angiografia</li><li id="Q_24_2"><button class="FuncButton" id="Q_24_2_Btn" onclick="CheckMCAnswer(24,2,this)">?</button>&#160;&#160;C. Color- doppler</li><li id="Q_24_3"><button class="FuncButton" id="Q_24_3_Btn" onclick="CheckMCAnswer(24,3,this)">?</button>&#160;&#160;D. Angio-TC</li><li id="Q_24_4"><button class="FuncButton" id="Q_24_4_Btn" onclick="CheckMCAnswer(24,4,this)">?</button>&#160;&#160;E. Tutte le precedenti</li></ol></li>
+<li class="QuizQuestion" id="Q_25" style="display: none;"><div class="QuestionText">La Gamma Camera &#x00E8;:<br /></div><ol class="MCAnswers"><li id="Q_25_0"><button class="FuncButton" id="Q_25_0_Btn" onclick="CheckMCAnswer(25,0,this)">?</button>&#160;&#160;A. Uno strumento di misura dei raggi cosmici</li><li id="Q_25_1"><button class="FuncButton" id="Q_25_1_Btn" onclick="CheckMCAnswer(25,1,this)">?</button>&#160;&#160;B. Una apparecchiatura di medicina nucleare</li><li id="Q_25_2"><button class="FuncButton" id="Q_25_2_Btn" onclick="CheckMCAnswer(25,2,this)">?</button>&#160;&#160;C. Un luogo di riunione della confraternita Gamma</li><li id="Q_25_3"><button class="FuncButton" id="Q_25_3_Btn" onclick="CheckMCAnswer(25,3,this)">?</button>&#160;&#160;D. Un ambiente riservato allo stoccaggio di prodotti radioattivi</li><li id="Q_25_4"><button class="FuncButton" id="Q_25_4_Btn" onclick="CheckMCAnswer(25,4,this)">?</button>&#160;&#160;E. Nessuna delle precedenti</li></ol></li>
+<li class="QuizQuestion" id="Q_26" style="display: none;"><div class="QuestionText">La penetrazione in profondit&#x00E0; degli US dipende da diversi fattori. Qual &#x00E8; il pi&#x00F9; importante?<br /></div><ol class="MCAnswers"><li id="Q_26_0"><button class="FuncButton" id="Q_26_0_Btn" onclick="CheckMCAnswer(26,0,this)">?</button>&#160;&#160;A. Frequenza</li><li id="Q_26_1"><button class="FuncButton" id="Q_26_1_Btn" onclick="CheckMCAnswer(26,1,this)">?</button>&#160;&#160;B. Potenza di emissione</li><li id="Q_26_2"><button class="FuncButton" id="Q_26_2_Btn" onclick="CheckMCAnswer(26,2,this)">?</button>&#160;&#160;C. Focalizzazione della sonda</li><li id="Q_26_3"><button class="FuncButton" id="Q_26_3_Btn" onclick="CheckMCAnswer(26,3,this)">?</button>&#160;&#160;D. Esperienza dell&#x2019;operatore</li><li id="Q_26_4"><button class="FuncButton" id="Q_26_4_Btn" onclick="CheckMCAnswer(26,4,this)">?</button>&#160;&#160;E. Temperatura dei tessuti</li></ol></li>
+<li class="QuizQuestion" id="Q_27" style="display: none;"><div class="QuestionText">I segni ecografici diretti per la diagnosi di ipertensione portale sono:<br /></div><ol class="MCAnswers"><li id="Q_27_0"><button class="FuncButton" id="Q_27_0_Btn" onclick="CheckMCAnswer(27,0,this)">?</button>&#160;&#160;A. Presenza di circoli collaterali porto-sistemici</li><li id="Q_27_1"><button class="FuncButton" id="Q_27_1_Btn" onclick="CheckMCAnswer(27,1,this)">?</button>&#160;&#160;B. Aumento del rapporto lobo caudato/lobo destro</li><li id="Q_27_2"><button class="FuncButton" id="Q_27_2_Btn" onclick="CheckMCAnswer(27,2,this)">?</button>&#160;&#160;C. Splenomegalia, nodularit&#x00E0; dei margini epatici</li><li id="Q_27_3"><button class="FuncButton" id="Q_27_3_Btn" onclick="CheckMCAnswer(27,3,this)">?</button>&#160;&#160;D. Calibro della vena porta inferiore a 10 mm</li><li id="Q_27_4"><button class="FuncButton" id="Q_27_4_Btn" onclick="CheckMCAnswer(27,4,this)">?</button>&#160;&#160;E. Tutte le precedenti</li></ol></li>
+<li class="QuizQuestion" id="Q_28" style="display: none;"><div class="QuestionText">Cosa di intende per screening con TC del carcinoma del polmone?<br /></div><ol class="MCAnswers"><li id="Q_28_0"><button class="FuncButton" id="Q_28_0_Btn" onclick="CheckMCAnswer(28,0,this)">?</button>&#160;&#160;A. Uso di TC del torace, con mezzo di contrasto, nella popolazione generale</li><li id="Q_28_1"><button class="FuncButton" id="Q_28_1_Btn" onclick="CheckMCAnswer(28,1,this)">?</button>&#160;&#160;B. Uso di apparecchiature TC dedicate allo studio del parenchima polmonare</li><li id="Q_28_2"><button class="FuncButton" id="Q_28_2_Btn" onclick="CheckMCAnswer(28,2,this)">?</button>&#160;&#160;C. Uso di TC ad emissione di elettroni</li><li id="Q_28_3"><button class="FuncButton" id="Q_28_3_Btn" onclick="CheckMCAnswer(28,3,this)">?</button>&#160;&#160;D. Uso di TC del torace, senza mezzo di contrasto, nella popolazione a rischio</li><li id="Q_28_4"><button class="FuncButton" id="Q_28_4_Btn" onclick="CheckMCAnswer(28,4,this)">?</button>&#160;&#160;E. Uso di biopsia percutanea TC guidata per la diagnosi dei noduli polmonari sospetti</li></ol></li>
+<li class="QuizQuestion" id="Q_29" style="display: none;"><div class="QuestionText">Nell&#x2019;articolazione temporo-mandibolare qual &#x00E8; l&#x2019;indagine pi&#x00F9; indicata nello studio del menisco?<br /></div><ol class="MCAnswers"><li id="Q_29_0"><button class="FuncButton" id="Q_29_0_Btn" onclick="CheckMCAnswer(29,0,this)">?</button>&#160;&#160;A. Ortopantomografia</li><li id="Q_29_1"><button class="FuncButton" id="Q_29_1_Btn" onclick="CheckMCAnswer(29,1,this)">?</button>&#160;&#160;B. Tc</li><li id="Q_29_2"><button class="FuncButton" id="Q_29_2_Btn" onclick="CheckMCAnswer(29,2,this)">?</button>&#160;&#160;C. RM</li><li id="Q_29_3"><button class="FuncButton" id="Q_29_3_Btn" onclick="CheckMCAnswer(29,3,this)">?</button>&#160;&#160;D. Spect</li><li id="Q_29_4"><button class="FuncButton" id="Q_29_4_Btn" onclick="CheckMCAnswer(29,4,this)">?</button>&#160;&#160;E. Nessuna delle precedenti</li></ol></li>
+<li class="QuizQuestion" id="Q_30" style="display: none;"><div class="QuestionText">Nel sospetto clinico di embolia polmonare, l&#x2019;indagine pi&#x00F9; accurata &#x00E8;:<br /></div><ol class="MCAnswers"><li id="Q_30_0"><button class="FuncButton" id="Q_30_0_Btn" onclick="CheckMCAnswer(30,0,this)">?</button>&#160;&#160;A. Cavografia superiore</li><li id="Q_30_1"><button class="FuncButton" id="Q_30_1_Btn" onclick="CheckMCAnswer(30,1,this)">?</button>&#160;&#160;B. TC spirale con mezzo di contrasto</li><li id="Q_30_2"><button class="FuncButton" id="Q_30_2_Btn" onclick="CheckMCAnswer(30,2,this)">?</button>&#160;&#160;C. RM</li><li id="Q_30_3"><button class="FuncButton" id="Q_30_3_Btn" onclick="CheckMCAnswer(30,3,this)">?</button>&#160;&#160;D. Ecocolor-Doppler</li><li id="Q_30_4"><button class="FuncButton" id="Q_30_4_Btn" onclick="CheckMCAnswer(30,4,this)">?</button>&#160;&#160;E. Radiografia del torace</li></ol></li>
+<li class="QuizQuestion" id="Q_31" style="display: none;"><div class="QuestionText">Nel caso di angioma epatico tipico:<br /></div><ol class="MCAnswers"><li id="Q_31_0"><button class="FuncButton" id="Q_31_0_Btn" onclick="CheckMCAnswer(31,0,this)">?</button>&#160;&#160;A. L&#x2019;ecografia pu&#x00F2; essere sufficiente a porre la diagnosi</li><li id="Q_31_1"><button class="FuncButton" id="Q_31_1_Btn" onclick="CheckMCAnswer(31,1,this)">?</button>&#160;&#160;B. &#x00C8; necessario eseguire un radiogramma diretto per la ricerca di calcificazioni</li><li id="Q_31_2"><button class="FuncButton" id="Q_31_2_Btn" onclick="CheckMCAnswer(31,2,this)">?</button>&#160;&#160;C. &#x00C8; necessaria l&#x2019;esecuzione di una arteriografia per la conferma diagnostica</li><li id="Q_31_3"><button class="FuncButton" id="Q_31_3_Btn" onclick="CheckMCAnswer(31,3,this)">?</button>&#160;&#160;D. &#x00C8; necessaria l&#x2019;esecuzione di una biopsia percutanea per la conferma diagnostica</li><li id="Q_31_4"><button class="FuncButton" id="Q_31_4_Btn" onclick="CheckMCAnswer(31,4,this)">?</button>&#160;&#160;E. La PET &#x00E8; l&#x2019;esame di prima istanza</li></ol></li>
+<li class="QuizQuestion" id="Q_32" style="display: none;"><div class="QuestionText">In un paziente con dolore al fianco destro ed una storia clinica di infezioni urinarie recidivanti da litiasi, il primo esame strumentale da eseguire &#x00E8;:<br /></div><ol class="MCAnswers"><li id="Q_32_0"><button class="FuncButton" id="Q_32_0_Btn" onclick="CheckMCAnswer(32,0,this)">?</button>&#160;&#160;A. Radiografia diretta dell&#x2019;addome</li><li id="Q_32_1"><button class="FuncButton" id="Q_32_1_Btn" onclick="CheckMCAnswer(32,1,this)">?</button>&#160;&#160;B. Tomografia Computerizzata della colonna lombare</li><li id="Q_32_2"><button class="FuncButton" id="Q_32_2_Btn" onclick="CheckMCAnswer(32,2,this)">?</button>&#160;&#160;C. Elettromiografia della parete addominale anteriore</li><li id="Q_32_3"><button class="FuncButton" id="Q_32_3_Btn" onclick="CheckMCAnswer(32,3,this)">?</button>&#160;&#160;D. Scintigrafia renale</li><li id="Q_32_4"><button class="FuncButton" id="Q_32_4_Btn" onclick="CheckMCAnswer(32,4,this)">?</button>&#160;&#160;E. Risonanza Magnetica della colonna lombare</li></ol></li>
+<li class="QuizQuestion" id="Q_33" style="display: none;"><div class="QuestionText"><br />L&#x2019;esame elettivo per la ricerca di metastasi osse, nel paziente oncologico asintomatico &#x00E8;:<br /></div><ol class="MCAnswers"><li id="Q_33_0"><button class="FuncButton" id="Q_33_0_Btn" onclick="CheckMCAnswer(33,0,this)">?</button>&#160;&#160;A. La scintigrafia ossea</li><li id="Q_33_1"><button class="FuncButton" id="Q_33_1_Btn" onclick="CheckMCAnswer(33,1,this)">?</button>&#160;&#160;B. La RM</li><li id="Q_33_2"><button class="FuncButton" id="Q_33_2_Btn" onclick="CheckMCAnswer(33,2,this)">?</button>&#160;&#160;C. La TC</li><li id="Q_33_3"><button class="FuncButton" id="Q_33_3_Btn" onclick="CheckMCAnswer(33,3,this)">?</button>&#160;&#160;D. La radiografia convenzionale</li><li id="Q_33_4"><button class="FuncButton" id="Q_33_4_Btn" onclick="CheckMCAnswer(33,4,this)">?</button>&#160;&#160;E. Nessuna delle precedenti</li></ol></li>
+<li class="QuizQuestion" id="Q_34" style="display: none;"><div class="QuestionText">Nel sospetto clinico di pneumotorace, qualora l&#x2019;esame radiologico del torace risulti equivoco, quale tecnica delle seguenti &#x00E8; la pi&#x00F9; idonea ai fini diagnostici?<br /></div><ol class="MCAnswers"><li id="Q_34_0"><button class="FuncButton" id="Q_34_0_Btn" onclick="CheckMCAnswer(34,0,this)">?</button>&#160;&#160;A. TC</li><li id="Q_34_1"><button class="FuncButton" id="Q_34_1_Btn" onclick="CheckMCAnswer(34,1,this)">?</button>&#160;&#160;B. RM</li><li id="Q_34_2"><button class="FuncButton" id="Q_34_2_Btn" onclick="CheckMCAnswer(34,2,this)">?</button>&#160;&#160;C. Ecografia</li><li id="Q_34_3"><button class="FuncButton" id="Q_34_3_Btn" onclick="CheckMCAnswer(34,3,this)">?</button>&#160;&#160;D. Scintigrafia</li><li id="Q_34_4"><button class="FuncButton" id="Q_34_4_Btn" onclick="CheckMCAnswer(34,4,this)">?</button>&#160;&#160;E. Angiografia</li></ol></li>
+<li class="QuizQuestion" id="Q_35" style="display: none;"><div class="QuestionText">Quale delle seguenti tecniche &#x00E8; pi&#x00F9; precisa nello studio del legamento crociato anteriore?<br /></div><ol class="MCAnswers"><li id="Q_35_0"><button class="FuncButton" id="Q_35_0_Btn" onclick="CheckMCAnswer(35,0,this)">?</button>&#160;&#160;A. TC</li><li id="Q_35_1"><button class="FuncButton" id="Q_35_1_Btn" onclick="CheckMCAnswer(35,1,this)">?</button>&#160;&#160;B. Radiogramma diretto in due proiezioni</li><li id="Q_35_2"><button class="FuncButton" id="Q_35_2_Btn" onclick="CheckMCAnswer(35,2,this)">?</button>&#160;&#160;C. Ecotomografia</li><li id="Q_35_3"><button class="FuncButton" id="Q_35_3_Btn" onclick="CheckMCAnswer(35,3,this)">?</button>&#160;&#160;D. RM</li><li id="Q_35_4"><button class="FuncButton" id="Q_35_4_Btn" onclick="CheckMCAnswer(35,4,this)">?</button>&#160;&#160;E. Fluoroscopia</li></ol></li>
+<li class="QuizQuestion" id="Q_36" style="display: none;"><div class="QuestionText">Le erosioni marginali in sede articolare sono manifestazioni di:<br /></div><ol class="MCAnswers"><li id="Q_36_0"><button class="FuncButton" id="Q_36_0_Btn" onclick="CheckMCAnswer(36,0,this)">?</button>&#160;&#160;A. Patologia degenerativa su base artrosica</li><li id="Q_36_1"><button class="FuncButton" id="Q_36_1_Btn" onclick="CheckMCAnswer(36,1,this)">?</button>&#160;&#160;B. Interessamento osteomielitico</li><li id="Q_36_2"><button class="FuncButton" id="Q_36_2_Btn" onclick="CheckMCAnswer(36,2,this)">?</button>&#160;&#160;C. Patologia sinoviale infiammatoria</li><li id="Q_36_3"><button class="FuncButton" id="Q_36_3_Btn" onclick="CheckMCAnswer(36,3,this)">?</button>&#160;&#160;D. Fratture da stress</li><li id="Q_36_4"><button class="FuncButton" id="Q_36_4_Btn" onclick="CheckMCAnswer(36,4,this)">?</button>&#160;&#160;E. Interessamento neoplastico</li></ol></li>
+<li class="QuizQuestion" id="Q_37" style="display: none;"><div class="QuestionText">Nel sospetto di rene policistico l&#x2019;indagine di prima scelta &#x00E8;:<br /></div><ol class="MCAnswers"><li id="Q_37_0"><button class="FuncButton" id="Q_37_0_Btn" onclick="CheckMCAnswer(37,0,this)">?</button>&#160;&#160;A. L&#x2019;urografia</li><li id="Q_37_1"><button class="FuncButton" id="Q_37_1_Btn" onclick="CheckMCAnswer(37,1,this)">?</button>&#160;&#160;B. L&#x2019;ecografia</li><li id="Q_37_2"><button class="FuncButton" id="Q_37_2_Btn" onclick="CheckMCAnswer(37,2,this)">?</button>&#160;&#160;C. La RM</li><li id="Q_37_3"><button class="FuncButton" id="Q_37_3_Btn" onclick="CheckMCAnswer(37,3,this)">?</button>&#160;&#160;D. La pielografia retrograda</li><li id="Q_37_4"><button class="FuncButton" id="Q_37_4_Btn" onclick="CheckMCAnswer(37,4,this)">?</button>&#160;&#160;E. Nessuna delle precedenti</li></ol></li>
+<li class="QuizQuestion" id="Q_38" style="display: none;"><div class="QuestionText">Nel caso di ematoma muscolare post-traumatico, a livello della coscia, quale tecnica diagnostica per immagini &#x00E8; pi&#x00F9; appropriata?<br /></div><ol class="MCAnswers"><li id="Q_38_0"><button class="FuncButton" id="Q_38_0_Btn" onclick="CheckMCAnswer(38,0,this)">?</button>&#160;&#160;A. Ecotomografia</li><li id="Q_38_1"><button class="FuncButton" id="Q_38_1_Btn" onclick="CheckMCAnswer(38,1,this)">?</button>&#160;&#160;B. Xerografia</li><li id="Q_38_2"><button class="FuncButton" id="Q_38_2_Btn" onclick="CheckMCAnswer(38,2,this)">?</button>&#160;&#160;C. Valutazione endoscopica</li><li id="Q_38_3"><button class="FuncButton" id="Q_38_3_Btn" onclick="CheckMCAnswer(38,3,this)">?</button>&#160;&#160;D. Termografia</li><li id="Q_38_4"><button class="FuncButton" id="Q_38_4_Btn" onclick="CheckMCAnswer(38,4,this)">?</button>&#160;&#160;E. Studio radiografico convenzionale</li></ol></li>
+<li class="QuizQuestion" id="Q_39" style="display: none;"><div class="QuestionText">Nel sospetto di frattura a legno verde della diafisi tibiale quale tecnica viene impiegata in prima istanza per la valutazione ai fini diagnostici?<br /></div><ol class="MCAnswers"><li id="Q_39_0"><button class="FuncButton" id="Q_39_0_Btn" onclick="CheckMCAnswer(39,0,this)">?</button>&#160;&#160;A. Ecotomografia</li><li id="Q_39_1"><button class="FuncButton" id="Q_39_1_Btn" onclick="CheckMCAnswer(39,1,this)">?</button>&#160;&#160;B. Xerografia</li><li id="Q_39_2"><button class="FuncButton" id="Q_39_2_Btn" onclick="CheckMCAnswer(39,2,this)">?</button>&#160;&#160;C. RM</li><li id="Q_39_3"><button class="FuncButton" id="Q_39_3_Btn" onclick="CheckMCAnswer(39,3,this)">?</button>&#160;&#160;D. TC</li><li id="Q_39_4"><button class="FuncButton" id="Q_39_4_Btn" onclick="CheckMCAnswer(39,4,this)">?</button>&#160;&#160;E. Studio radiografico convenzionale</li></ol></li>
+<li class="QuizQuestion" id="Q_40" style="display: none;"><div class="QuestionText">In quale delle seguenti condizioni patologiche a livello epatico la biopsia percutanea eco-guidata risulta un efficace completamento diagnostico?<br /></div><ol class="MCAnswers"><li id="Q_40_0"><button class="FuncButton" id="Q_40_0_Btn" onclick="CheckMCAnswer(40,0,this)">?</button>&#160;&#160;A. Angioma semplice</li><li id="Q_40_1"><button class="FuncButton" id="Q_40_1_Btn" onclick="CheckMCAnswer(40,1,this)">?</button>&#160;&#160;B. Angioma cavernoso</li><li id="Q_40_2"><button class="FuncButton" id="Q_40_2_Btn" onclick="CheckMCAnswer(40,2,this)">?</button>&#160;&#160;C. Shunt porto-cavale</li><li id="Q_40_3"><button class="FuncButton" id="Q_40_3_Btn" onclick="CheckMCAnswer(40,3,this)">?</button>&#160;&#160;D. Sospetta lesione neoplastica primitiva</li><li id="Q_40_4"><button class="FuncButton" id="Q_40_4_Btn" onclick="CheckMCAnswer(40,4,this)">?</button>&#160;&#160;E. Stasi biliare di natura litiasica</li></ol></li>
+<li class="QuizQuestion" id="Q_41" style="display: none;"><div class="QuestionText">Nel caso di sospetta litiasi delle vie biliari, quale tecnica di diagnostica per immagini risulta pi&#x00F9; idonea per un primo accertamento strumentale?<br /></div><ol class="MCAnswers"><li id="Q_41_0"><button class="FuncButton" id="Q_41_0_Btn" onclick="CheckMCAnswer(41,0,this)">?</button>&#160;&#160;A. Ecografia</li><li id="Q_41_1"><button class="FuncButton" id="Q_41_1_Btn" onclick="CheckMCAnswer(41,1,this)">?</button>&#160;&#160;B. Eco-color-Doppler</li><li id="Q_41_2"><button class="FuncButton" id="Q_41_2_Btn" onclick="CheckMCAnswer(41,2,this)">?</button>&#160;&#160;C. Scintigrafia</li><li id="Q_41_3"><button class="FuncButton" id="Q_41_3_Btn" onclick="CheckMCAnswer(41,3,this)">?</button>&#160;&#160;D. RM</li><li id="Q_41_4"><button class="FuncButton" id="Q_41_4_Btn" onclick="CheckMCAnswer(41,4,this)">?</button>&#160;&#160;E. TC</li></ol></li>
+<li class="QuizQuestion" id="Q_42" style="display: none;"><div class="QuestionText">Il tempo di rilassamento T1 indica:<br /></div><ol class="MCAnswers"><li id="Q_42_0"><button class="FuncButton" id="Q_42_0_Btn" onclick="CheckMCAnswer(42,0,this)">?</button>&#160;&#160;A. Il ripristino della magnetizzazione longitudinale</li><li id="Q_42_1"><button class="FuncButton" id="Q_42_1_Btn" onclick="CheckMCAnswer(42,1,this)">?</button>&#160;&#160;B. Il ripristino della magnetizzazione trasversale</li><li id="Q_42_2"><button class="FuncButton" id="Q_42_2_Btn" onclick="CheckMCAnswer(42,2,this)">?</button>&#160;&#160;C. La perdita di coerenza di fase degli spin</li><li id="Q_42_3"><button class="FuncButton" id="Q_42_3_Btn" onclick="CheckMCAnswer(42,3,this)">?</button>&#160;&#160;D. La omologazione della frequenza degli spin</li><li id="Q_42_4"><button class="FuncButton" id="Q_42_4_Btn" onclick="CheckMCAnswer(42,4,this)">?</button>&#160;&#160;E. Nessuno dei precedenti</li></ol></li>
+<li class="QuizQuestion" id="Q_43" style="display: none;"><div class="QuestionText">Nel sospetto radiografico di osteolisi maligna, quale altra tecnica di diagnostica per immagini risulta pi&#x00F9; efficace nel caratterizzare le lesioni e nel definirne la sua estensione?<br /></div><ol class="MCAnswers"><li id="Q_43_0"><button class="FuncButton" id="Q_43_0_Btn" onclick="CheckMCAnswer(43,0,this)">?</button>&#160;&#160;A. Studio con fluoroscopia</li><li id="Q_43_1"><button class="FuncButton" id="Q_43_1_Btn" onclick="CheckMCAnswer(43,1,this)">?</button>&#160;&#160;B. TC, esclusivamente con ricostruzioni sagittali, senza m.d.c.</li><li id="Q_43_2"><button class="FuncButton" id="Q_43_2_Btn" onclick="CheckMCAnswer(43,2,this)">?</button>&#160;&#160;C. RM con e senza m.d.c.</li><li id="Q_43_3"><button class="FuncButton" id="Q_43_3_Btn" onclick="CheckMCAnswer(43,3,this)">?</button>&#160;&#160;D. Angiografia</li><li id="Q_43_4"><button class="FuncButton" id="Q_43_4_Btn" onclick="CheckMCAnswer(43,4,this)">?</button>&#160;&#160;E. Ecografia</li></ol></li>
+<li class="QuizQuestion" id="Q_44" style="display: none;"><div class="QuestionText">Nello studio della patologia articolare dell&#x2019;anca, quale delle seguenti tecniche non ha un significativo ruolo diagnostico?<br /></div><ol class="MCAnswers"><li id="Q_44_0"><button class="FuncButton" id="Q_44_0_Btn" onclick="CheckMCAnswer(44,0,this)">?</button>&#160;&#160;A. Angiografia</li><li id="Q_44_1"><button class="FuncButton" id="Q_44_1_Btn" onclick="CheckMCAnswer(44,1,this)">?</button>&#160;&#160;B. Studio radiografico diretto</li><li id="Q_44_2"><button class="FuncButton" id="Q_44_2_Btn" onclick="CheckMCAnswer(44,2,this)">?</button>&#160;&#160;C. TC</li><li id="Q_44_3"><button class="FuncButton" id="Q_44_3_Btn" onclick="CheckMCAnswer(44,3,this)">?</button>&#160;&#160;D. RM</li><li id="Q_44_4"><button class="FuncButton" id="Q_44_4_Btn" onclick="CheckMCAnswer(44,4,this)">?</button>&#160;&#160;E. Ecotomografia</li></ol></li>
+<li class="QuizQuestion" id="Q_45" style="display: none;"><div class="QuestionText">Nel sospetto diagnostico di patologia timica, quale tecnica di diagnostica per immagini &#x00E8; la pi&#x00F9; accurata a valutare le strutture del mediastino?<br /></div><ol class="MCAnswers"><li id="Q_45_0"><button class="FuncButton" id="Q_45_0_Btn" onclick="CheckMCAnswer(45,0,this)">?</button>&#160;&#160;A. Ecografia</li><li id="Q_45_1"><button class="FuncButton" id="Q_45_1_Btn" onclick="CheckMCAnswer(45,1,this)">?</button>&#160;&#160;B. TC</li><li id="Q_45_2"><button class="FuncButton" id="Q_45_2_Btn" onclick="CheckMCAnswer(45,2,this)">?</button>&#160;&#160;C. Eco-color-doppler con m.d.c.</li><li id="Q_45_3"><button class="FuncButton" id="Q_45_3_Btn" onclick="CheckMCAnswer(45,3,this)">?</button>&#160;&#160;D. Radiogramma standard del torace</li><li id="Q_45_4"><button class="FuncButton" id="Q_45_4_Btn" onclick="CheckMCAnswer(45,4,this)">?</button>&#160;&#160;E. SPECT</li></ol></li>
+<li class="QuizQuestion" id="Q_46" style="display: none;"><div class="QuestionText">Nel sospetto clinico di broncopolmonite, quali tecniche di diagnostica per immagini risultano le pi&#x00F9; appropriate?<br /></div><ol class="MCAnswers"><li id="Q_46_0"><button class="FuncButton" id="Q_46_0_Btn" onclick="CheckMCAnswer(46,0,this)">?</button>&#160;&#160;A. Studio radiografico standard, eventualmente seguito da TC</li><li id="Q_46_1"><button class="FuncButton" id="Q_46_1_Btn" onclick="CheckMCAnswer(46,1,this)">?</button>&#160;&#160;B. Ecografia standard, seguita da Eco-color-doppler</li><li id="Q_46_2"><button class="FuncButton" id="Q_46_2_Btn" onclick="CheckMCAnswer(46,2,this)">?</button>&#160;&#160;C. Angiografia selettiva dell&#x2019;arteria polmonare, seguita da TC</li><li id="Q_46_3"><button class="FuncButton" id="Q_46_3_Btn" onclick="CheckMCAnswer(46,3,this)">?</button>&#160;&#160;D. RM, seguita da angiografia polmonare</li><li id="Q_46_4"><button class="FuncButton" id="Q_46_4_Btn" onclick="CheckMCAnswer(46,4,this)">?</button>&#160;&#160;E. TC con ricostruzioni tridimensionali</li></ol></li>
+<li class="QuizQuestion" id="Q_47" style="display: none;"><div class="QuestionText">In quale tra le sotto-indicate epatopatie, la diagnostica per immagini &#x00E8; di scarsa o nulla utilit&#x00E0;?<br /></div><ol class="MCAnswers"><li id="Q_47_0"><button class="FuncButton" id="Q_47_0_Btn" onclick="CheckMCAnswer(47,0,this)">?</button>&#160;&#160;A. Epatiti acute</li><li id="Q_47_1"><button class="FuncButton" id="Q_47_1_Btn" onclick="CheckMCAnswer(47,1,this)">?</button>&#160;&#160;B. Cisti sierosa semplice</li><li id="Q_47_2"><button class="FuncButton" id="Q_47_2_Btn" onclick="CheckMCAnswer(47,2,this)">?</button>&#160;&#160;C. Angioma epatico</li><li id="Q_47_3"><button class="FuncButton" id="Q_47_3_Btn" onclick="CheckMCAnswer(47,3,this)">?</button>&#160;&#160;D. Ascesso epatico</li><li id="Q_47_4"><button class="FuncButton" id="Q_47_4_Btn" onclick="CheckMCAnswer(47,4,this)">?</button>&#160;&#160;E. Ipertensione portale</li></ol></li>
+<li class="QuizQuestion" id="Q_48" style="display: none;"><div class="QuestionText">Quale delle sotto-indicate tecniche riveste il ruolo di indagine di elezione nello studio della perviet&#x00E0; delle tube uterine?<br /></div><ol class="MCAnswers"><li id="Q_48_0"><button class="FuncButton" id="Q_48_0_Btn" onclick="CheckMCAnswer(48,0,this)">?</button>&#160;&#160;A. Esame radiografico diretto</li><li id="Q_48_1"><button class="FuncButton" id="Q_48_1_Btn" onclick="CheckMCAnswer(48,1,this)">?</button>&#160;&#160;B. Ecotomografia</li><li id="Q_48_2"><button class="FuncButton" id="Q_48_2_Btn" onclick="CheckMCAnswer(48,2,this)">?</button>&#160;&#160;C. TC</li><li id="Q_48_3"><button class="FuncButton" id="Q_48_3_Btn" onclick="CheckMCAnswer(48,3,this)">?</button>&#160;&#160;D. Isterosalpingografia</li><li id="Q_48_4"><button class="FuncButton" id="Q_48_4_Btn" onclick="CheckMCAnswer(48,4,this)">?</button>&#160;&#160;E. RM</li></ol></li>
+<li class="QuizQuestion" id="Q_49" style="display: none;"><div class="QuestionText">Nelle donne di et&#x00E0; inferiore ai 40 anni, di solito, la mammografia<br /></div><ol class="MCAnswers"><li id="Q_49_0"><button class="FuncButton" id="Q_49_0_Btn" onclick="CheckMCAnswer(49,0,this)">?</button>&#160;&#160;A. &#x00C8; indicata</li><li id="Q_49_1"><button class="FuncButton" id="Q_49_1_Btn" onclick="CheckMCAnswer(49,1,this)">?</button>&#160;&#160;B. &#x00C8; potenzialmente carcinogenetica</li><li id="Q_49_2"><button class="FuncButton" id="Q_49_2_Btn" onclick="CheckMCAnswer(49,2,this)">?</button>&#160;&#160;C. &#x00C8; assolutamente controindicata</li><li id="Q_49_3"><button class="FuncButton" id="Q_49_3_Btn" onclick="CheckMCAnswer(49,3,this)">?</button>&#160;&#160;D. Presenta una minore capacit&#x00E0; di individuazione del carcinoma mammario per la costituzione ghiandolare</li><li id="Q_49_4"><button class="FuncButton" id="Q_49_4_Btn" onclick="CheckMCAnswer(49,4,this)">?</button>&#160;&#160;E. Presenta una maggiore capacit&#x00E0; di individuazione del carcinoma mammario per la costituzione ghiandolare</li></ol></li>
+<li class="QuizQuestion" id="Q_50" style="display: none;"><div class="QuestionText">La diagnosi di natura di un nodulo polmonare si ottiene con:<br /></div><ol class="MCAnswers"><li id="Q_50_0"><button class="FuncButton" id="Q_50_0_Btn" onclick="CheckMCAnswer(50,0,this)">?</button>&#160;&#160;A. Esame radiologico del torace</li><li id="Q_50_1"><button class="FuncButton" id="Q_50_1_Btn" onclick="CheckMCAnswer(50,1,this)">?</button>&#160;&#160;B. TC con mezzo di contrasto</li><li id="Q_50_2"><button class="FuncButton" id="Q_50_2_Btn" onclick="CheckMCAnswer(50,2,this)">?</button>&#160;&#160;C. Accertamento bioptico</li><li id="Q_50_3"><button class="FuncButton" id="Q_50_3_Btn" onclick="CheckMCAnswer(50,3,this)">?</button>&#160;&#160;D. RM con mezzo di contrasto</li><li id="Q_50_4"><button class="FuncButton" id="Q_50_4_Btn" onclick="CheckMCAnswer(50,4,this)">?</button>&#160;&#160;E. PET</li></ol></li>
+<li class="QuizQuestion" id="Q_51" style="display: none;"><div class="QuestionText">Per fare diagnosi di idronefrosi di solito &#x00E8; sufficiente<br /></div><ol class="MCAnswers"><li id="Q_51_0"><button class="FuncButton" id="Q_51_0_Btn" onclick="CheckMCAnswer(51,0,this)">?</button>&#160;&#160;A. RM</li><li id="Q_51_1"><button class="FuncButton" id="Q_51_1_Btn" onclick="CheckMCAnswer(51,1,this)">?</button>&#160;&#160;B. TC</li><li id="Q_51_2"><button class="FuncButton" id="Q_51_2_Btn" onclick="CheckMCAnswer(51,2,this)">?</button>&#160;&#160;C. Urografia</li><li id="Q_51_3"><button class="FuncButton" id="Q_51_3_Btn" onclick="CheckMCAnswer(51,3,this)">?</button>&#160;&#160;D. Ecografia</li><li id="Q_51_4"><button class="FuncButton" id="Q_51_4_Btn" onclick="CheckMCAnswer(51,4,this)">?</button>&#160;&#160;E. Radiografia diretta dell&#x2019;addome</li></ol></li>
+<li class="QuizQuestion" id="Q_52" style="display: none;"><div class="QuestionText">Tra le tecniche di radiologia interventistica, la prima ad essere utilizzata &#x00E8; stata:<br /></div><ol class="MCAnswers"><li id="Q_52_0"><button class="FuncButton" id="Q_52_0_Btn" onclick="CheckMCAnswer(52,0,this)">?</button>&#160;&#160;A. La termoablazione dei tumori</li><li id="Q_52_1"><button class="FuncButton" id="Q_52_1_Btn" onclick="CheckMCAnswer(52,1,this)">?</button>&#160;&#160;B. I filtri cavali</li><li id="Q_52_2"><button class="FuncButton" id="Q_52_2_Btn" onclick="CheckMCAnswer(52,2,this)">?</button>&#160;&#160;C. La chemio-embolizzazione dei tumori</li><li id="Q_52_3"><button class="FuncButton" id="Q_52_3_Btn" onclick="CheckMCAnswer(52,3,this)">?</button>&#160;&#160;D. L&#x2019;angioplastica transluminale</li><li id="Q_52_4"><button class="FuncButton" id="Q_52_4_Btn" onclick="CheckMCAnswer(52,4,this)">?</button>&#160;&#160;E. Nessuna delle precedenti</li></ol></li>
+<li class="QuizQuestion" id="Q_53" style="display: none;"><div class="QuestionText">Per la ricerca di metastasi polmonari, l&#x2019;indagine pi&#x00F9; accurata &#x00E8;<br /></div><ol class="MCAnswers"><li id="Q_53_0"><button class="FuncButton" id="Q_53_0_Btn" onclick="CheckMCAnswer(53,0,this)">?</button>&#160;&#160;A. TC</li><li id="Q_53_1"><button class="FuncButton" id="Q_53_1_Btn" onclick="CheckMCAnswer(53,1,this)">?</button>&#160;&#160;B. RM</li><li id="Q_53_2"><button class="FuncButton" id="Q_53_2_Btn" onclick="CheckMCAnswer(53,2,this)">?</button>&#160;&#160;C. Angiografia</li><li id="Q_53_3"><button class="FuncButton" id="Q_53_3_Btn" onclick="CheckMCAnswer(53,3,this)">?</button>&#160;&#160;D. Ecografia</li><li id="Q_53_4"><button class="FuncButton" id="Q_53_4_Btn" onclick="CheckMCAnswer(53,4,this)">?</button>&#160;&#160;E. Radiografia standard del torace</li></ol></li>
+<li class="QuizQuestion" id="Q_54" style="display: none;"><div class="QuestionText">La patologia nodulare della tiroide si studia, in prima istanza, con:<br /></div><ol class="MCAnswers"><li id="Q_54_0"><button class="FuncButton" id="Q_54_0_Btn" onclick="CheckMCAnswer(54,0,this)">?</button>&#160;&#160;A. Radiografia diretta del collo</li><li id="Q_54_1"><button class="FuncButton" id="Q_54_1_Btn" onclick="CheckMCAnswer(54,1,this)">?</button>&#160;&#160;B. Scintigrafia</li><li id="Q_54_2"><button class="FuncButton" id="Q_54_2_Btn" onclick="CheckMCAnswer(54,2,this)">?</button>&#160;&#160;C. TC</li><li id="Q_54_3"><button class="FuncButton" id="Q_54_3_Btn" onclick="CheckMCAnswer(54,3,this)">?</button>&#160;&#160;D. RM</li><li id="Q_54_4"><button class="FuncButton" id="Q_54_4_Btn" onclick="CheckMCAnswer(54,4,this)">?</button>&#160;&#160;E. Ecografia</li></ol></li>
+<li class="QuizQuestion" id="Q_55" style="display: none;"><div class="QuestionText">Il solfato di bario, presente in alcuni mezzi di contrasto, somministrato al paziente viene rapidamente assorbito dall&#x2019;organismo?<br /></div><ol class="MCAnswers"><li id="Q_55_0"><button class="FuncButton" id="Q_55_0_Btn" onclick="CheckMCAnswer(55,0,this)">?</button>&#160;&#160;A. No</li><li id="Q_55_1"><button class="FuncButton" id="Q_55_1_Btn" onclick="CheckMCAnswer(55,1,this)">?</button>&#160;&#160;B. Si</li><li id="Q_55_2"><button class="FuncButton" id="Q_55_2_Btn" onclick="CheckMCAnswer(55,2,this)">?</button>&#160;&#160;C. Dipende dalla quantit&#x00E0;</li><li id="Q_55_3"><button class="FuncButton" id="Q_55_3_Btn" onclick="CheckMCAnswer(55,3,this)">?</button>&#160;&#160;D. Dipende dalla concentrazione</li><li id="Q_55_4"><button class="FuncButton" id="Q_55_4_Btn" onclick="CheckMCAnswer(55,4,this)">?</button>&#160;&#160;E. Dipende dalla viscosit&#x00E0;</li></ol></li>
+<li class="QuizQuestion" id="Q_56" style="display: none;"><div class="QuestionText">L&#x2019;acquisizione delle immagini in TC spirale avviene:<br /></div><ol class="MCAnswers"><li id="Q_56_0"><button class="FuncButton" id="Q_56_0_Btn" onclick="CheckMCAnswer(56,0,this)">?</button>&#160;&#160;A. Quando il lettino portapazienti e il tubo radiogeno sono fermi</li><li id="Q_56_1"><button class="FuncButton" id="Q_56_1_Btn" onclick="CheckMCAnswer(56,1,this)">?</button>&#160;&#160;B. Quando il lettino portapazienti avanza all&#x2019;interno del gantry, contemporaneamente alla rotazione del tubo radiogeno</li><li id="Q_56_2"><button class="FuncButton" id="Q_56_2_Btn" onclick="CheckMCAnswer(56,2,this)">?</button>&#160;&#160;C. Quando il lettino portapazienti avanza all&#x2019;interno del gantry, con tubo radiogeno fermo</li><li id="Q_56_3"><button class="FuncButton" id="Q_56_3_Btn" onclick="CheckMCAnswer(56,3,this)">?</button>&#160;&#160;D. Quando il tubo radiogeno ruota e il lettino portapazienti &#x00E8; fermo</li><li id="Q_56_4"><button class="FuncButton" id="Q_56_4_Btn" onclick="CheckMCAnswer(56,4,this)">?</button>&#160;&#160;E. Nessuna delle precedenti</li></ol></li>
+<li class="QuizQuestion" id="Q_57" style="display: none;"><div class="QuestionText">La teleradiografia &#x00E8;:<br /></div><ol class="MCAnswers"><li id="Q_57_0"><button class="FuncButton" id="Q_57_0_Btn" onclick="CheckMCAnswer(57,0,this)">?</button>&#160;&#160;A. La tecnica secondaria utilizzata per l&#x2019;esecuzione dell&#x2019;esame radiografico del torace</li><li id="Q_57_1"><button class="FuncButton" id="Q_57_1_Btn" onclick="CheckMCAnswer(57,1,this)">?</button>&#160;&#160;B. Una tecnica che aumenta la distanza fuoco-sistema di rilevamento</li><li id="Q_57_2"><button class="FuncButton" id="Q_57_2_Btn" onclick="CheckMCAnswer(57,2,this)">?</button>&#160;&#160;C. Una tecnica che riduce l&#x2019;ingrandimento di immagine</li><li id="Q_57_3"><button class="FuncButton" id="Q_57_3_Btn" onclick="CheckMCAnswer(57,3,this)">?</button>&#160;&#160;D. Una tecnica che riduce l&#x2019;effetto penombra dei contorni</li><li id="Q_57_4"><button class="FuncButton" id="Q_57_4_Btn" onclick="CheckMCAnswer(57,4,this)">?</button>&#160;&#160;E. Tutte le precedenti</li></ol></li>
+<li class="QuizQuestion" id="Q_58" style="display: none;"><div class="QuestionText">Nella sclerosi multipla, la malattia neurologica su base autoimmune, per verificare la presenza di lesioni attive, l&#x2019;esame pi&#x00F9; indicato &#x00E8;:<br /></div><ol class="MCAnswers"><li id="Q_58_0"><button class="FuncButton" id="Q_58_0_Btn" onclick="CheckMCAnswer(58,0,this)">?</button>&#160;&#160;A. La TC dell&#x2019;encefalo, senza e con somministrazione di mezzo di contrasto</li><li id="Q_58_1"><button class="FuncButton" id="Q_58_1_Btn" onclick="CheckMCAnswer(58,1,this)">?</button>&#160;&#160;B. La TC dell&#x2019;encefalo, senza somministrazione di mezzo di contrasto</li><li id="Q_58_2"><button class="FuncButton" id="Q_58_2_Btn" onclick="CheckMCAnswer(58,2,this)">?</button>&#160;&#160;C. L&#x2019;angiografia cerebrale</li><li id="Q_58_3"><button class="FuncButton" id="Q_58_3_Btn" onclick="CheckMCAnswer(58,3,this)">?</button>&#160;&#160;D. La RM dell&#x2019;encefalo, senza e con somministrazione di mezzo di contrasto</li><li id="Q_58_4"><button class="FuncButton" id="Q_58_4_Btn" onclick="CheckMCAnswer(58,4,this)">?</button>&#160;&#160;E. La RM dell&#x2019;encefalo, senza somministrazione di mezzo di contrasto</li></ol></li>
+<li class="QuizQuestion" id="Q_59" style="display: none;"><div class="QuestionText">Il seno costo-frenico &#x00E8; situato:<br /></div><ol class="MCAnswers"><li id="Q_59_0"><button class="FuncButton" id="Q_59_0_Btn" onclick="CheckMCAnswer(59,0,this)">?</button>&#160;&#160;A. Nello spazio retrocardiaco</li><li id="Q_59_1"><button class="FuncButton" id="Q_59_1_Btn" onclick="CheckMCAnswer(59,1,this)">?</button>&#160;&#160;B. Tra le coste e lo sterno</li><li id="Q_59_2"><button class="FuncButton" id="Q_59_2_Btn" onclick="CheckMCAnswer(59,2,this)">?</button>&#160;&#160;C. Tra la trachea e l&#x2019;arco polmonare</li><li id="Q_59_3"><button class="FuncButton" id="Q_59_3_Btn" onclick="CheckMCAnswer(59,3,this)">?</button>&#160;&#160;D. Alla base del polmone</li><li id="Q_59_4"><button class="FuncButton" id="Q_59_4_Btn" onclick="CheckMCAnswer(59,4,this)">?</button>&#160;&#160;E. Nessuna delle precedenti</li></ol></li></ol>
+
+
+
+</div>
+
+</div>
+
+<div class="Feedback" id="FeedbackDiv">
+<div class="FeedbackText" id="FeedbackContent"></div>
+<button id="FeedbackOKButton" class="FuncButton" onclick="HideFeedback(); return false;">&#160;OK&#160;</button>
+</div>
+
+<!-- BeginBottomNavButtons -->
+
+
+
+<!-- EndBottomNavButtons -->
+
+<!-- BeginSubmissionForm -->
+
+<!-- EndSubmissionForm -->
+
+</body>
+
+</html>

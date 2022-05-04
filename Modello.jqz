@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<hotpot-jquiz-file>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <rdf:Description rdf:about="">
+    <dc:creator>XanderAle</dc:creator>
+    <dc:title>&amp;#x003C;img src=&quot;logo.png&quot; width=&quot;500&quot; height=&quot;169.783&quot;&amp;#x003E;</dc:title>
+  </rdf:Description>
+</rdf:RDF><version>7</version>
+
+<data>
+<title>&amp;#x003C;img src=&quot;logo.png&quot; width=&quot;500&quot; height=&quot;169.783&quot;&amp;#x003E;</title>
+
+<timer><seconds>60</seconds><include-timer>0</include-timer></timer>
+
+<reading>
+<include-reading>0</include-reading>
+<reading-title></reading-title>
+<reading-text></reading-text>
+
+</reading>
+
+<questions><question-record><question>Questo &amp;#x00E8; il testo della domanda</question><clue></clue><category></category><weighting>100</weighting><fixed>0</fixed><question-type>1</question-type><answers><answer><text>Risposta corretta</text><feedback>&amp;#x003C;img src=&quot;check-mark.png&quot; width=&quot;65&quot; height=&quot;65&quot;&amp;#x003E; &amp;#x003C;audio preload=&quot;auto&quot; autoplay src=&quot;Correct.mp3&quot;&amp;#x003E;&amp;#x003C;br&amp;#x003E;&amp;#x003C;img src=&quot;Illustrazioni/Angolo di Cobb.gif&quot; alt=&quot;Angolo di Cobb.gif&quot; title=&quot;Angolo di Cobb&quot; width=&quot;300&quot; height=&quot;400&quot;/&amp;#x003E;&amp;#x003C;br&amp;#x003E; Nel metodo di Cobb, si tracciano due linee su una RX antero-posteriore della colonna vertebrale, una che si estende dalla sommit&amp;#x00E0; della vertebra superiore pi&amp;#x00F9; inclinata e l&apos;altra dal fondo della vertebra inferiore pi&amp;#x00F9; inclinata. L&apos;angolo formato da queste linee &amp;#x00E8; l&apos;angolo di Cobb.&amp;#x003C;br&amp;#x003E;</feedback><correct>1</correct><percent-correct>100</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Risposta sbagliata</text><feedback>&amp;#x003C;img src=&quot;cross.png&quot; width=&quot;65&quot; height=&quot;65&quot;&amp;#x003E; &amp;#x003C;audio preload=&quot;auto&quot; autoplay src=&quot;Wrong.mp3&quot;&amp;#x003E;</feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Tterza risposta</text><feedback>Nel metodo di Cobb, si tracciano due linee su una RX antero-posteriore della colonna vertebrale, una che si estende dalla sommit&amp;#x00E0; della vertebra superiore pi&amp;#x00F9; inclinata e l&apos;altra dal fondo della vertebra inferiore pi&amp;#x00F9; inclinata. L&apos;angolo formato da queste linee &amp;#x00E8; l&apos;angolo di Cobb.</feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text></text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer></answers></question-record><question-record><question></question><clue></clue><category></category><weighting>100</weighting><fixed>0</fixed><question-type>1</question-type><answers><answer><text>Risposta corretta</text><feedback>&amp;#x003C;img src=&quot;check-mark.png&quot; width=&quot;65&quot; height=&quot;65&quot;&amp;#x003E; &amp;#x003C;audio preload=&quot;auto&quot; autoplay src=&quot;Correct.mp3&quot;&amp;#x003E;</feedback><correct>1</correct><percent-correct>100</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Risposta sbagliata</text><feedback>&amp;#x003C;img src=&quot;cross.png&quot; width=&quot;65&quot; height=&quot;65&quot;&amp;#x003E; &amp;#x003C;audio preload=&quot;auto&quot; autoplay src=&quot;Wrong.mp3&quot;&amp;#x003E;</feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Terza risposta 2</text><feedback>&amp;#x003C;img src=&quot;cross.png&quot; width=&quot;65&quot; height=&quot;65&quot;&amp;#x003E; &amp;#x003C;audio preload=&quot;auto&quot; autoplay src=&quot;Wrong.mp3&quot;&amp;#x003E;&amp;#x003C;br&amp;#x003E;Sbagliato!</feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer></answers></question-record></questions>
+</data>
+
+<hotpot-config-file>
+<jquiz>
+<exercise-subtitle>Rispondi e ripeti i quiz fino a non sbagliare mai, solo cos&amp;#x00EC; potrai essere &amp;#x003C;i&amp;#x003E;&amp;#x003C;b&amp;#x003E;ZOBELIFICATO!!!&amp;#x003C;/b&amp;#x003E;&amp;#x003C;/i&amp;#x003E;</exercise-subtitle>
+<instructions></instructions>
+<guess-correct>Corretto!</guess-correct>
+<guess-incorrect>Sbagliato!</guess-incorrect>
+<partly-incorrect>La tua risposta &amp;#x00E8; parzialmente sbagliata:</partly-incorrect>
+<enter-a-guess>Please enter a guess.</enter-a-guess>
+<next-correct-letter>Next correct letter in the answer: </next-correct-letter>
+<correct-answers>Risposte esatte:</correct-answers>
+<show-answer-caption>Mostra risposta</show-answer-caption>
+<include-hint>1</include-hint>
+<include-show-answer>1</include-show-answer>
+<next-ex-url>nextpage.htm</next-ex-url>
+<send-email>0</send-email>
+<continuous-scoring>0</continuous-scoring>
+<show-correct-first-time>1</show-correct-first-time>
+<shuffle-questions>1</shuffle-questions>
+<shuffle-answers>1</shuffle-answers>
+<show-limited-questions>0</show-limited-questions>
+<questions-to-show>2</questions-to-show>
+<short-answer-tries-on-hybrid-q>2</short-answer-tries-on-hybrid-q>
+<separate-javascript-file>0</separate-javascript-file>
+<case-sensitive>0</case-sensitive>
+<include-keypad>0</include-keypad>
+</jquiz>
+
+<global>
+<your-score-is>&amp;#x003C;b&amp;#x003E;Il tuo punteggio &amp;#x00E8;:&amp;#x003C;/b&amp;#x003E;</your-score-is>
+<correct-indicator>&amp;#x003C;span style=&quot;color:green;&quot;&amp;#x003E;&amp;#x2714;&amp;#x003C;/span&amp;#x003E;</correct-indicator>
+<incorrect-indicator>&amp;#x003C;span style=&quot;color:red;&quot;&amp;#x003E;&amp;#x2718;&amp;#x003C;/span&amp;#x003E;</incorrect-indicator>
+<correct-first-time>Risposte corretta al primo colpo:</correct-first-time>
+<completed-so-far>Domande a cui hai risposto fin&apos;ora: </completed-so-far>
+<exercise-completed>&amp;#x003C;b&amp;#x003E;Hai completato il test!&amp;#x003C;/b&amp;#x003E;</exercise-completed>
+<keypad-characters></keypad-characters>
+<times-up>Your time is over!</times-up>
+<next-ex-caption>&amp;#x003C;b&amp;#x003E;&amp;#x2192;&amp;#x003C;/b&amp;#x003E;</next-ex-caption>
+<back-caption>&amp;#x003C;b&amp;#x003E;&amp;#x2190;&amp;#x003C;/b&amp;#x003E;</back-caption>
+<contents-caption>Indice</contents-caption>
+<include-next-ex>0</include-next-ex>
+<include-contents>0</include-contents>
+<include-back>0</include-back>
+<contents-url>contents.htm</contents-url>
+<graphic-url>Sdondo2.jpg</graphic-url>
+<font-face>Geneva,Arial,sans-serif</font-face>
+<font-size>medium</font-size>
+<page-bg-color>#C0C0C0</page-bg-color>
+<title-color>#ffffff</title-color>
+<ex-bg-color>#FFFFFF</ex-bg-color>
+<text-color>#000000</text-color>
+<link-color>#0000FF</link-color>
+<vlink-color>#0080c0</vlink-color>
+<nav-bar-color>#00000</nav-bar-color>
+<formmail-url>http://yourserver.com/cgi-bin/FormMail.pl</formmail-url>
+<email>you@yourserver.com</email>
+<name-please>Please enter your name:</name-please>
+<user-string-1>one</user-string-1>
+<user-string-2>two</user-string-2>
+<user-string-3>three</user-string-3>
+<header-code></header-code>
+<correct-first-time>Risposte corretta al primo colpo:</correct-first-time>
+<check-caption>Controlla</check-caption>
+<ok-caption>OK</ok-caption>
+<next-q-caption>&amp;#x003C;b&amp;#x003E;&amp;#x2192;&amp;#x003C;/b&amp;#x003E;</next-q-caption>
+<last-q-caption>&amp;#x003C;b&amp;#x003E;&amp;#x2190;&amp;#x003C;/b&amp;#x003E;</last-q-caption>
+<hint-caption>Suggerimento</hint-caption>
+<show-all-questions-caption>Visualizzazione domande in serie</show-all-questions-caption>
+<show-one-by-one-caption>Visualizzazione singola domanda</show-one-by-one-caption>
+<show-also-correct>1</show-also-correct>
+<process-for-rtl>0</process-for-rtl>
+<include-scorm-12>0</include-scorm-12>
+</global>
+</hotpot-config-file>
+</hotpot-jquiz-file>
